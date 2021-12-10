@@ -25,7 +25,8 @@ _activate_virtual_environment() {
     return 1
   fi
 
-  source env/bin/activate || die "[ERROR] Failed to activate virtual environment!"
+  [ -d "$UTILS_SCRIPT_DIR/../../env" ] || die "[ERROR] $UTILS_SCRIPT_DIR/../../env does not exist and therefore no virtual environment could be activated!"
+  source "$UTILS_SCRIPT_DIR/../../env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   python --version >&2
 
   return 0

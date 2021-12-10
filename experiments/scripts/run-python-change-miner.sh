@@ -102,18 +102,15 @@ sed -i "s|\"use_stackimpact\": false,|\"use_stackimpact\": false|g" "$conf_file_
 
 export PATH="$SCRIPT_DIR/../../tools/graphviz-2.48.0/local-bin/bin:$PATH"
 
-pushd . > /dev/null 2>&1
-cd "$PYTHON_CHANGE_MINER_DIR_PATH"
-  _activate_virtual_environment || die
-
-  # Mine change graphs
-  python main.py collect-cgs || die "[ERROR] python-change-miner failed to mine all change graphs!"
-
-  # Search for patterns in the change graphs
-  python main.py patterns || die "[ERROR] python-change-miner failed to search for patterns in the change graphs!"
-
-  _deactivate_virtual_environment || die
-popd > /dev/null 2>&1
+_activate_virtual_environment || die
+  pushd . > /dev/null 2>&1
+  cd "$PYTHON_CHANGE_MINER_DIR_PATH"
+    # Mine change graphs
+    python main.py collect-cgs || die "[ERROR] python-change-miner failed to mine all change graphs!"
+    # Search for patterns in the change graphs
+    python main.py patterns || die "[ERROR] python-change-miner failed to search for patterns in the change graphs!"
+  popd > /dev/null 2>&1
+_deactivate_virtual_environment || die
 
 echo "DONE!"
 exit 0

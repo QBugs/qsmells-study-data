@@ -138,10 +138,23 @@ _install_python_version_x "3" "8" "0" || die
 echo ""
 echo "Installing up virtualenv..."
 
-pyenv local "3.8.0"                   || die "[ERROR] Failed to load Python v3.8.0!"
-pip install virtualenv                || die "[ERROR] Failed to install 'virtualenv'!"
-virtualenv --version > /dev/null 2>&1 || die "[ERROR] Could not find 'virtualenv'!"
-rm ".python-version"                  || die
+# Switch to installed version
+pyenv local "3.8.0"                             || die "[ERROR] Failed to load Python v3.8.0!"
+# Install virtualenv
+pip install virtualenv                          || die "[ERROR] Failed to install 'virtualenv'!"
+# Runtime sanity check
+virtualenv --version > /dev/null 2>&1           || die "[ERROR] Could not find 'virtualenv'!"
+# Create virtual environment
+rm -rf "$SCRIPT_DIR/env"
+virtualenv -p $(which python) "$SCRIPT_DIR/env" || die "[ERROR] Failed to create virtual environment!"
+# Activate virtual environment
+source "$SCRIPT_DIR/env/bin/activate"           || die "[ERROR] Failed to activate virtual environment!"
+# Ensure pip, setuptools, and wheel are up to date
+pip install --upgrade pip setuptools wheel      || die "[ERROR] Failed to upgrade 'pip', 'setuptools', and 'wheel'!"
+# Deactivate virtual environment
+deactivate                                      || die "[ERROR] Failed to deactivate virtual environment!"
+# Revert to system Python version
+rm ".python-version"                            || die
 
 #
 # Graphviz - Graph Visualization Tools
@@ -198,33 +211,14 @@ cd "$PYTHON_CHANGE_MINER_DIR_PATH"
   # Disable the generation of .dot files as it does not work for VERY LARGE diffs
   sed -i '219s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
   sed -i '220s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
-popd > /dev/null 2>&1
-
-#
-# Create a Python virtual environment and install the 'Python Change Miner' tool
-#
-
-echo ""
-echo "Setting up Python virtual environment..."
-
-pushd . > /dev/null 2>&1
-cd "$PYTHON_CHANGE_MINER_DIR_PATH"
-  # Switch to installed version
-  pyenv local "3.8.0"                 || die "[ERROR] Failed to load Python v3.8.0!"
-  # Create virtual environment
-  virtualenv -p $(which python) env   || die "[ERROR] Failed to create virtual environment!"
   # Activate virtual environment
-  source env/bin/activate             || die "[ERROR] Failed to activate virtual environment!"
-  # Ensure pip, setuptools, and wheel are up to date
-  pip install --upgrade pip setuptools wheel || die "[ERROR] Failed to upgrade 'pip', 'setuptools', and 'wheel'!"
+  source "$SCRIPT_DIR/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   # Install tool's dependencies
-  pip install -r requirements.txt     || die "[ERROR] Failed to install requirements!"
-  # Freeze requirements/dependencies
-  pip freeze > python-change-miner-requirements.txt || die "[ERROR] Failed to freeze tool's requirements!"
+  pip install -r requirements.txt       || die "[ERROR] Failed to install tool's requirements!"
   # Deactivate virtual environment
-  deactivate                          || die "[ERROR] Failed to deactivate virtual environment!"
+  deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
   # Revert to system Python version
-  rm ".python-version"                || die
+  rm ".python-version"                  || die
 popd > /dev/null 2>&1
 
 #
@@ -247,18 +241,14 @@ pushd . > /dev/null 2>&1
 cd "$PYSMELL_DIR_PATH"
   # Switch to lastest commit
   git checkout f5e9673a3d1b97f8376b7f3884ca0bee5545e1fd || die "[ERROR] Commit 'f5e9673a3d1b97f8376b7f3884ca0bee5545e1fd' not found!"
-  # Switch to installed version
-  pyenv local "3.8.0"                 || die "[ERROR] Failed to load Python v3.8.0!"
-  # Create virtual environment
-  virtualenv -p $(which python) env   || die "[ERROR] Failed to create virtual environment!"
   # Activate virtual environment
-  source env/bin/activate             || die "[ERROR] Failed to activate virtual environment!"
+  source "$SCRIPT_DIR/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   # Install tool's dependencies
-  python setup.py install             || die "[ERROR] Failed to install requirements!"
+  python setup.py install               || die "[ERROR] Failed to install tool's requirements!"
   # Deactivate virtual environment
-  deactivate                          || die "[ERROR] Failed to deactivate virtual environment!"
+  deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
   # Revert to system Python version
-  rm ".python-version"                || die
+  rm ".python-version"                  || die
 popd > /dev/null 2>&1
 
 #
