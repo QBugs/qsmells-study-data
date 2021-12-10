@@ -195,6 +195,9 @@ pushd . > /dev/null 2>&1
 cd "$PYTHON_CHANGE_MINER_DIR_PATH"
   # Switch to lastest commit
   git checkout 301047b187416177e5d008367e4642908b4f08f2 || die "[ERROR] Commit '301047b187416177e5d008367e4642908b4f08f2' not found!"
+  # Disable the generation of .dot files as it does not work for VERY LARGE diffs
+  sed -i '219s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
+  sed -i '220s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
 popd > /dev/null 2>&1
 
 #
