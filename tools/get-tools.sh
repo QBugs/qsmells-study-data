@@ -254,7 +254,7 @@ cd "$PYSMELL_DIR_PATH"
   # Activate virtual environment
   source env/bin/activate             || die "[ERROR] Failed to activate virtual environment!"
   # Install tool's dependencies
-  python setup.py install            || die "[ERROR] Failed to install requirements!"
+  python setup.py install             || die "[ERROR] Failed to install requirements!"
   # Deactivate virtual environment
   deactivate                          || die "[ERROR] Failed to deactivate virtual environment!"
   # Revert to system Python version
