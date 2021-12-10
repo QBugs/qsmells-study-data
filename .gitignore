@@ -7,6 +7,9 @@ tools/*
 !tools/get-tools.sh
 !tools/get-libraries.R
 
+# Ignore the directory that holds a clone of each quantum project
+subjects/repositories
+
 # ---------------------------------------------------------------------- Windows
 
 # Windows thumbnail cache files
