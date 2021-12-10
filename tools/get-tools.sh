@@ -217,8 +217,6 @@ cd "$PYTHON_CHANGE_MINER_DIR_PATH"
   pip install -r requirements.txt       || die "[ERROR] Failed to install tool's requirements!"
   # Deactivate virtual environment
   deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
-  # Revert to system Python version
-  rm ".python-version"                  || die
 popd > /dev/null 2>&1
 
 #
@@ -247,8 +245,6 @@ cd "$PYSMELL_DIR_PATH"
   python setup.py install               || die "[ERROR] Failed to install tool's requirements!"
   # Deactivate virtual environment
   deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
-  # Revert to system Python version
-  rm ".python-version"                  || die
 popd > /dev/null 2>&1
 
 #
