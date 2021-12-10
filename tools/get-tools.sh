@@ -108,8 +108,8 @@ fi
 
 pushd . > /dev/null 2>&1
 cd "$PYENV_DIR"
-  # Switch to 'v2.0.1' branch/tag
-  git checkout v2.0.1 || die "[ERROR] Branch/Tag 'v2.0.1' not found!"
+  # Switch to 'v2.2.2' branch/tag
+  git checkout v2.2.2 || die "[ERROR] Branch/Tag 'v2.2.2' not found!"
 popd > /dev/null 2>&1
 
 export PYENV_ROOT="$PYENV_DIR"
