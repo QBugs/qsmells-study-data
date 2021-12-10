@@ -28,6 +28,10 @@ export GUMTREE_PYPARSER_PATH="$PYTHON_CHANGE_MINER_DIR_PATH/external/pythonparse
 export GUMTREE_BIN_PATH="$PYTHON_CHANGE_MINER_DIR_PATH/external/compiled/gumtree-2.1.2/bin/gumtree"
 [ -s "$GUMTREE_BIN_PATH" ] || die "[ERROR] $GUMTREE_BIN_PATH does not exist or it is empty!"
 
+GRAPHVIZ_BIN_DIR_PATH="$SCRIPT_DIR/../../tools/graphviz-2.48.0/local-bin/bin"
+[ -d "$GRAPHVIZ_BIN_DIR_PATH" ] || die "[ERROR] $GRAPHVIZ_BIN_DIR_PATH does not exist!"
+export PATH="$GRAPHVIZ_BIN_DIR_PATH:$PATH"
+
 # ------------------------------------------------------------------------- Args
 
 USAGE="Usage: ${BASH_SOURCE[0]} [--repositories_dir_path <path, e.g., ../../subjects/repositories] --output_dir_path <path, e.g., ../data/generated/change-patterns-by-python-change-miner> [help]"
@@ -99,8 +103,6 @@ sed -i "s|\"patterns_min_date\": str?,||g" "$conf_file_path" || die "[ERROR] Fai
 sed -i "s|\"stackimpact_agent_key\": str?||g" "$conf_file_path" || die "[ERROR] Failed to remove stackimpact_agent_key property!"
 # Fix JSON, as some properties got removed
 sed -i "s|\"use_stackimpact\": false,|\"use_stackimpact\": false|g" "$conf_file_path" || die "[ERROR] Failed to fix use_stackimpact property!"
-
-export PATH="$SCRIPT_DIR/../../tools/graphviz-2.48.0/local-bin/bin:$PATH"
 
 _activate_virtual_environment || die
   pushd . > /dev/null 2>&1
