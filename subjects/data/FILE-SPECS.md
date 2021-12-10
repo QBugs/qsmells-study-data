@@ -1,8 +1,8 @@
 # Specifications of data files
 
-## [`data/quantum-computing-platforms.csv`](data/quantum-computing-platforms.csv)
+## [`data/quantum-computing-projects.csv`](data/quantum-computing-projects.csv)
 
-Set of quantum computing platforms used in the study [Bugs in Quantum Computing Platforms: An Empirical Study](https://arxiv.org/pdf/2110.14560.pdf).
+Set of quantum computing projects used in the study [Bugs in Quantum Computing Platforms: An Empirical Study](https://arxiv.org/pdf/2110.14560.pdf).
 
 - `project_name`: name of the quantum project
   * factor: e.g., "Qiskit Aer"
