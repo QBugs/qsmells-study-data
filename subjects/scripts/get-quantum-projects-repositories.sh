@@ -17,13 +17,13 @@ source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} [--quantum_projects_csv_file_path <path, e.g., ../data/quantum-computing-projects.csv>] [--output_dir_path <path, e.g., ../.repositories>] [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} [--quantum_projects_csv_file_path <path, e.g., ../data/quantum-computing-projects.csv>] [--output_dir_path <path, e.g., ../repositories>] [help]"
 if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ]; then
   die "$USAGE"
 fi
 
 QUANTUM_PROJECTS_CSV_FILE_PATH="$SCRIPT_DIR/../data/quantum-computing-projects.csv"
-OUTPUT_DIR_PATH="$SCRIPT_DIR/../.repositories"
+OUTPUT_DIR_PATH="$SCRIPT_DIR/../repositories"
 
 while [[ "$1" = --* ]]; do
   OPTION=$1; shift
