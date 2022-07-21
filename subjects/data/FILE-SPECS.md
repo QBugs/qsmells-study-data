@@ -1,17 +1,11 @@
 # Specifications of data files
 
-## [`data/quantum-computing-projects.csv`](data/quantum-computing-projects.csv)
+## [`data/programs.csv`](data/programs.csv)
 
-Set of quantum computing projects used in the study [Bugs in Quantum Computing Platforms: An Empirical Study](https://arxiv.org/pdf/2110.14560.pdf).
+Set of quantum programs from the [Qiskit-Aqua repository](https://github.com/Qiskit/qiskit-aqua/tree/main/qiskit/aqua/algorithms) and from the book [Programming Quantum Computers, from O'Reilly](https://github.com/oreilly-qc/oreilly-qc.github.io/tree/master/samples/Qiskit).
 
-- `project_name`: name of the quantum project
-  * factor: e.g., "Qiskit Aer"
+- `program`: name of the quantum program
+  * factor: e.g., "adapt_vqe"
 
-- `project_clone_url`: URL to the project's repository
-  * factor: e.g., https://github.com/Qiskit/qiskit-aer.git
-
-- `version`: Latest version of the project as of December 10, 2021
-  * factor: e.g., 0.9.1
-
-- `language`: Programming languages used in the project
-  * factor: e.g., "C++ Py"
+- `lines_of_code`: number lines of code
+  * numerical, e.g., 151
