@@ -5,7 +5,6 @@
 #   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
 #     and [Virtualenv](https://virtualenv.pypa.io)
 #   - [Graphviz - Graph Visualization Tools](https://graphviz.org)
-#   - [Python Change Miner](https://github.com/JetBrains-Research/python-change-miner)
 #   - [PySmell](https://github.com/QBugs/PySmell)
 #   - [R](https://www.r-project.org)
 #
@@ -186,37 +185,6 @@ cd "$GRAPHVIZ_DIR_PATH"
   ./configure --prefix="$GRAPHVIZ_DIR_PATH/local-bin"
   make
   make install
-popd > /dev/null 2>&1
-
-#
-# Get Python Change Miner
-#
-echo ""
-echo "Setting up Python Change Miner..."
-
-PYTHON_CHANGE_MINER_DIR_PATH="$SCRIPT_DIR/python-change-miner"
-
-# Remove any previous file and directory
-rm -rf "$PYTHON_CHANGE_MINER_DIR_PATH"
-
-git clone https://github.com/JetBrains-Research/python-change-miner.git "$PYTHON_CHANGE_MINER_DIR_PATH"
-if [ "$?" -ne "0" ] || [ ! -d "$PYTHON_CHANGE_MINER_DIR_PATH" ]; then
-  die "[ERROR] Clone of 'Python Change Miner' failed!"
-fi
-
-pushd . > /dev/null 2>&1
-cd "$PYTHON_CHANGE_MINER_DIR_PATH"
-  # Switch to lastest commit
-  git checkout 301047b187416177e5d008367e4642908b4f08f2 || die "[ERROR] Commit '301047b187416177e5d008367e4642908b4f08f2' not found!"
-  # Disable the generation of .dot files as it does not work for VERY LARGE diffs
-  sed -i '219s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
-  sed -i '220s/^/#/' "patterns/search.py" || die "[ERROR] Failed to disable the generation of .dot files!"
-  # Activate virtual environment
-  source "$SCRIPT_DIR/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
-  # Install tool's dependencies
-  pip install -r requirements.txt       || die "[ERROR] Failed to install tool's requirements!"
-  # Deactivate virtual environment
-  deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
 popd > /dev/null 2>&1
 
 #
