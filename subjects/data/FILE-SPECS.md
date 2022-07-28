@@ -1,11 +1,14 @@
 # Specifications of data files
 
-## [`data/programs.csv`](data/programs.csv)
+## [`data/subjects.csv`](data/subjects.csv)
 
-Set of quantum programs from the [Qiskit-Aqua repository](https://github.com/Qiskit/qiskit-aqua/tree/main/qiskit/aqua/algorithms) and from the book [Programming Quantum Computers, from O'Reilly](https://github.com/oreilly-qc/oreilly-qc.github.io/tree/master/samples/Qiskit).
+Set of quantum programs / algorithms from the [Qiskit framework](https://github.com/Qiskit) and from O'Reilly's book [Programming Quantum Computers](https://github.com/oreilly-qc/oreilly-qc.github.io/tree/master/samples/Qiskit).
 
-- `program`: name of the quantum program
+- `origin`: name of the source
+  * factor, i.e., "qiskit" or oreilly-qc
+
+- `name`: name of the quantum program / algorithm
   * factor: e.g., "adapt_vqe"
 
-- `lines_of_code`: number lines of code
-  * numerical, e.g., 151
+- `path`: relative path to the quantum program / algorithm
+  * factor: e.g., "adapt_vqe"
