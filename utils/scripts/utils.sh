@@ -29,6 +29,9 @@ _activate_virtual_environment() {
   source "$UTILS_SCRIPT_DIR/../../tools/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   python --version >&2
 
+  # TODO
+  # Add oreilly-qc's samples/Qiskit directory to Python PATH
+
   return 0
 }
 
