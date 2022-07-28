@@ -4,8 +4,9 @@
 # This script downloads and sets up the following tools:
 #   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
 #     and [Virtualenv](https://virtualenv.pypa.io)
-#   - [Graphviz - Graph Visualization Tools](https://graphviz.org)
 #   - [PySmell](https://github.com/QBugs/PySmell)
+#   - [O'Reilly Code samples for Programming Quantum Computers](https://github.com/oreilly-qc/oreilly-qc.github.io)
+#   - [Qiskit](https://github.com/Qiskit)
 #   - [R](https://www.r-project.org)
 #
 # Usage:
@@ -107,8 +108,8 @@ fi
 
 pushd . > /dev/null 2>&1
 cd "$PYENV_DIR"
-  # Switch to 'v2.2.2' branch/tag
-  git checkout v2.2.2 || die "[ERROR] Branch/Tag 'v2.2.2' not found!"
+  # Switch to 'v2.3.2' branch/tag
+  git checkout v2.3.2 || die "[ERROR] Branch/Tag 'v2.3.2' not found!"
 popd > /dev/null 2>&1
 
 export PYENV_ROOT="$PYENV_DIR"
@@ -127,7 +128,7 @@ echo ""
 echo "Installing required Python versions..."
 
 # Install v3.8.0
-_install_python_version_x "3" "8" "0" || die
+_install_python_version_x "3" "7" "8" || die
 
 #
 # Get Virtualenv
@@ -138,7 +139,7 @@ echo ""
 echo "Installing up virtualenv..."
 
 # Switch to installed version
-pyenv local "3.8.0"                             || die "[ERROR] Failed to load Python v3.8.0!"
+pyenv local "3.7.8"                             || die "[ERROR] Failed to load Python v3.7.8!"
 # Install virtualenv
 pip install virtualenv                          || die "[ERROR] Failed to install 'virtualenv'!"
 # Runtime sanity check
@@ -154,38 +155,6 @@ pip install --upgrade pip setuptools wheel      || die "[ERROR] Failed to upgrad
 deactivate                                      || die "[ERROR] Failed to deactivate virtual environment!"
 # Revert to system Python version
 rm ".python-version"                            || die
-
-#
-# Graphviz - Graph Visualization Tools
-#
-echo ""
-echo "Setting up Graphviz..."
-
-GRAPHVIZ_VERSION="2.48.0"
-GRAPHVIZ_DIR_PATH="$SCRIPT_DIR/graphviz-$GRAPHVIZ_VERSION"
-GRAPHVIZ_TAR_GZ_FILE_NAME="graphviz-$GRAPHVIZ_VERSION.tar.gz"
-GRAPHVIZ_TAR_GZ_FILE_PATH="$SCRIPT_DIR/$GRAPHVIZ_TAR_GZ_FILE_NAME"
-
-# Remove any previous file and directory
-rm -rf "$GRAPHVIZ_DIR_PATH"
-
-wget "https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/$GRAPHVIZ_VERSION/$GRAPHVIZ_TAR_GZ_FILE_NAME"
-if [ "$?" -ne "0" ] || [ ! -f "$GRAPHVIZ_TAR_GZ_FILE_PATH" ]; then
-  die "[ERROR] Clone of 'Graphviz' failed!"
-fi
-
-tar -xvzf "$GRAPHVIZ_TAR_GZ_FILE_PATH"
-if [ "$?" -ne "0" ] || [ ! -d "$GRAPHVIZ_DIR_PATH" ]; then
-  die "[ERROR] Extraction of $GRAPHVIZ_TAR_GZ_FILE_PATH failed!"
-fi
-
-pushd . > /dev/null 2>&1
-cd "$GRAPHVIZ_DIR_PATH"
-  mkdir -p "local-bin"
-  ./configure --prefix="$GRAPHVIZ_DIR_PATH/local-bin"
-  make
-  make install
-popd > /dev/null 2>&1
 
 #
 # Get PySmell
@@ -214,6 +183,42 @@ cd "$PYSMELL_DIR_PATH"
   # Deactivate virtual environment
   deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
 popd > /dev/null 2>&1
+
+#
+# Subjects
+#
+
+OREILLY_QC_DIR="$SCRIPT_DIR/oreilly-qc.github.io"
+
+# Remove any previous file and directory
+rm -rf "$OREILLY_QC_DIR"
+
+git clone https://github.com/oreilly-qc/oreilly-qc.github.io.git "$OREILLY_QC_DIR"
+if [ "$?" -ne "0" ] || [ ! -d "$OREILLY_QC_DIR" ]; then
+  die "[ERROR] Clone of 'O'Reilly' programs!"
+fi
+
+pushd . > /dev/null 2>&1
+cd "$OREILLY_QC_DIR"
+  # Switch to lastest commit
+  git checkout 54a30ae14ce37e7db3cf6e550c8880fc5a2a2a2e || die "[ERROR] Commit '54a30ae14ce37e7db3cf6e550c8880fc5a2a2a2e' not found!"
+popd > /dev/null 2>&1
+
+# Switch to installed version
+pyenv local "3.7.8"                        || die "[ERROR] Failed to load Python v3.7.8!"
+# Activate virtual environment
+source env/bin/activate                    || die "[ERROR] Failed to activate virtual environment!"
+# Install Qiskit
+pip install qiskit==0.37.0                 || die "[ERROR] Failed to install Qiskit!"
+# Install other modules
+pip install qiskit-terra==0.21.0           || die "[ERROR] Failed to install Qiskit Terra!"
+pip install qiskit-nature==0.4.3           || die "[ERROR] Failed to install Qiskit Nature!"
+pip install qiskit-optimization==0.4.0     || die "[ERROR] Failed to install Qiskit Optimization!"
+pip install qiskit-machine-learning==0.4.0 || die "[ERROR] Failed to install Qiskit Machine Learning!"
+# Deactivate virtual environment
+deactivate                          || die "[ERROR] Failed to deactivate virtual environment!"
+# Revert to system Python version
+rm ".python-version"                || die
 
 #
 # R packages

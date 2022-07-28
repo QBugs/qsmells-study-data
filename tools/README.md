@@ -2,6 +2,7 @@
 
 - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
   and [Virtualenv](https://virtualenv.pypa.io)
-- [Graphviz - Graph Visualization Tools](https://graphviz.org)
 - [PySmell](https://github.com/QBugs/PySmell)
+- [O'Reilly Code samples for Programming Quantum Computers](https://github.com/oreilly-qc/oreilly-qc.github.io)
+- [Qiskit](https://github.com/Qiskit)
 - [R](https://www.r-project.org)
