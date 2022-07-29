@@ -46,12 +46,12 @@ from qiskit.circuit.instruction import Instruction
 from qiskit.circuit.quantumregister import QuantumRegister, Qubit
 from qiskit.circuit.classicalregister import ClassicalRegister, Clbit
 
-def extract_qubit_id(qubit: Qubit) -> String:
+def extract_qubit_id(qubit: Qubit) -> str:
     quantumRegister: QuantumRegister = qubit.register
     id = 'q-%s-%d' % (quantumRegister.name, qubit.index)
     return(id)
 
-def extract_clbit_id(clbit: Clbit) -> String:
+def extract_clbit_id(clbit: Clbit) -> str:
     classicalRegister: ClassicalRegister = clbit.register
     id = 'c-%s-%d' % (classicalRegister.name, clbit.index)
     return(id)
