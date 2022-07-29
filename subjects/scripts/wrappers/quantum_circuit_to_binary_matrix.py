@@ -56,6 +56,13 @@ def extract_clbit_id(clbit: Clbit) -> str:
     id = 'c-%s-%d' % (classicalRegister.name, clbit.index)
     return(id)
 
+def extract_op_id(operation: Instruction) -> str:
+    params_types = []
+    for param in operation.params:
+        params_types.append(str(type(param).__name__))
+    id = '%s(%s)' % (operation.name, ','.join(params_types))
+    return(id)
+
 def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
     # Collect QuantumCircuit's data
     qubits = qc.qubits
@@ -80,7 +87,7 @@ def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
         row_names.append(extract_clbit_id(clbit))
     # Collect operations' names
     for index in range(len(qdata)):
-        col_names.append('%s-%d' % (qdata[index].operation.name, index))
+        col_names.append('%s-%d' % (extract_op_id(qdata[index].operation), index))
 
     # Initialize 'matrix' as a dataframe and name rows and columns accordingly
     df = pd.DataFrame(matrix, columns=col_names, index=row_names)
@@ -91,7 +98,7 @@ def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
 
         # Operation
         operation: Instruction = circuitInstruction.operation
-        col_name = '%s-%d' % (operation.name, index)
+        col_name = '%s-%d' % (extract_op_id(operation), index)
 
         # In some qubit(s) and/or clbit(s)
         op_qubits = circuitInstruction.qubits
@@ -102,7 +109,7 @@ def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
             df[col_name][extract_clbit_id(op_clbit)] = 1
 
     sys.stdout.write(str(df) + '\n')
-    df.to_csv(output_file_path, header=True, index=True, mode='w')
+    df.to_csv(output_file_path, header=True, index=True, sep=';', mode='w')
 
     return(df)
 
