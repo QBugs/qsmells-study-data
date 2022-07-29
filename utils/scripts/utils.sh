@@ -52,4 +52,20 @@ _deactivate_virtual_environment() {
   return 0
 }
 
+#
+# Given a relative path, this function converts it into a full/absolute path.
+#
+rel_to_abs_filename() {
+  local USAGE="Usage: ${FUNCNAME[0]}"
+  if [ "$#" != 1 ] ; then
+    echo "$USAGE" >&2
+    return 1
+  fi
+
+  rel_filename="$1"
+  echo "$(cd "$(dirname "$rel_filename")" && pwd)/$(basename "$rel_filename")" || return 1
+
+  return 0
+}
+
 # EOF
