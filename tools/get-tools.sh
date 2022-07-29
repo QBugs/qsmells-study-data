@@ -7,6 +7,7 @@
 #   - [PySmell](https://github.com/QBugs/PySmell)
 #   - [O'Reilly Code samples for Programming Quantum Computers](https://github.com/oreilly-qc/oreilly-qc.github.io)
 #   - [Qiskit](https://github.com/Qiskit)
+#   - [Cloc](https://github.com/AlDanial/cloc)
 #   - [R](https://www.r-project.org)
 #
 # Usage:
@@ -216,9 +217,72 @@ pip install qiskit-nature==0.4.3           || die "[ERROR] Failed to install Qis
 pip install qiskit-optimization==0.4.0     || die "[ERROR] Failed to install Qiskit Optimization!"
 pip install qiskit-machine-learning==0.4.0 || die "[ERROR] Failed to install Qiskit Machine Learning!"
 # Deactivate virtual environment
-deactivate                          || die "[ERROR] Failed to deactivate virtual environment!"
+deactivate                                 || die "[ERROR] Failed to deactivate virtual environment!"
 # Revert to system Python version
-rm ".python-version"                || die
+rm ".python-version"                       || die
+
+#
+# Get Qiskit's repositories
+#
+echo ""
+echo "Setting up Qiskit's repositories..."
+
+QISKIT_TERRA_DIR="$SCRIPT_DIR/qiskit-terra"
+rm -rf "$QISKIT_TERRA_DIR"
+
+git clone https://github.com/Qiskit/qiskit-terra.git "$QISKIT_TERRA_DIR"
+if [ "$?" -ne "0" ] || [ ! -d "$QISKIT_TERRA_DIR" ]; then
+  die "[ERROR] Clone of qiskit-terra!"
+fi
+
+pushd . > /dev/null 2>&1
+cd "$QISKIT_TERRA_DIR"
+  git checkout 0.21.0 || die "[ERROR] Version '0.21.0' not found!"
+popd > /dev/null 2>&1
+
+QISKIT_MACHINE_LEARNING_DIR="$SCRIPT_DIR/qiskit-machine-learning"
+rm -rf "$QISKIT_MACHINE_LEARNING_DIR"
+
+git clone https://github.com/Qiskit/qiskit-machine-learning.git "$QISKIT_MACHINE_LEARNING_DIR"
+if [ "$?" -ne "0" ] || [ ! -d "$QISKIT_MACHINE_LEARNING_DIR" ]; then
+  die "[ERROR] Clone of qiskit-machine-learning!"
+fi
+
+pushd . > /dev/null 2>&1
+cd "$QISKIT_MACHINE_LEARNING_DIR"
+  git checkout 0.4.0 || die "[ERROR] Version '0.4.0' not found!"
+popd > /dev/null 2>&1
+
+QISKIT_NATURE_LEARNING_DIR="$SCRIPT_DIR/qiskit-nature"
+rm -rf "$QISKIT_NATURE_LEARNING_DIR"
+
+git clone https://github.com/Qiskit/qiskit-nature.git "$QISKIT_NATURE_LEARNING_DIR"
+if [ "$?" -ne "0" ] || [ ! -d "$QISKIT_NATURE_LEARNING_DIR" ]; then
+  die "[ERROR] Clone of qiskit-nature!"
+fi
+
+pushd . > /dev/null 2>&1
+cd "$QISKIT_NATURE_LEARNING_DIR"
+  git checkout 0.4.3 || die "[ERROR] Version '0.4.3' not found!"
+popd > /dev/null 2>&1
+
+#
+# Get Cloc
+#
+echo ""
+echo "Setting up Cloc..."
+
+CLOC_VERSION="v1.94"
+CLOC_FILE="cloc"
+CLOC_URL="https://raw.githubusercontent.com/AlDanial/cloc/$CLOC_VERSION/$CLOC_FILE"
+
+wget -np -nv "$CLOC_URL" -O "$SCRIPT_DIR/$CLOC_FILE"
+if [ "$?" -ne "0" ] || [ ! -s "$SCRIPT_DIR/$CLOC_FILE" ]; then
+  die "[ERROR] Failed to download $CLOC_URL!"
+fi
+
+# Check whether 'cloc' is available
+perl "$SCRIPT_DIR/$CLOC_FILE" --version > /dev/null 2>&1 || die "[ERROR] cloc is not executable."
 
 #
 # R packages
