@@ -42,6 +42,17 @@ plot_label <- function(text) {
 
 # ---------------------------------------------------------------- Study related
 
-# TODO
+#
+# Convert the origin name of each subject into a pretty string.
+#
+pretty_print_origin <- function(origin) {
+  if (origin == 'qiskit') {
+    return('Qiskit')
+  } else if (origin == 'oreilly-qc') {
+    return("O'Reilly Programming Quantum Computers' book")
+  } else {
+    return(origin)
+  }
+}
 
 # EOF
