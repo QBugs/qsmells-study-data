@@ -5,14 +5,14 @@ from base_util import *
 
 def build_call_order_line_list(my_parsed_object, my_circuit_bit_object):
     global_call_list = my_parsed_object.get_global_full_statement_list()
+
     function_implementation_dict = my_parsed_object.get_function_implementation_dict()
-    file_defined_circuit_name_list = my_circuit_bit_object.get_file_defined_circuit_list()
-    file_infectious_circuit_name_list = my_circuit_bit_object.get_file_infectious_circuit_name_list()
     result_list = list()
     my_keyword_list = build_my_keyword_list()
     while len(global_call_list) != 0:
         full_statement_call, line_number = global_call_list[0]
-        # print("full statement call = ", full_statement_call)
+        print("full statement call = ", full_statement_call, " line number = ", line_number)
+        print("remain = ", len(global_call_list))
         full_statement_scope, full_statement_scope_name = find_line_scope(line_number, my_parsed_object.get_line_info_dict())
         global_call_list.pop(0)
         if full_statement_call.startswith("def "):
@@ -45,7 +45,9 @@ def build_call_order_line_list(my_parsed_object, my_circuit_bit_object):
         result_list.append((full_statement_call, line_number))
         if '.' not in call_name and call_name in function_implementation_dict:
             function_implementation_line_list = function_implementation_dict[call_name]
+            print("add: ", len(function_implementation_line_list))
             global_call_list = function_implementation_line_list + global_call_list
+
     return result_list
 
 
@@ -182,5 +184,12 @@ def build_keyword_class_call_dict(keyword_list):
         class_call_name, method = statement.split(':', 1)
         keyword_class_call_dict[class_call_name].append(method)
     return keyword_class_call_dict
+
+
+def is_loop(statement):
+    for statement_token in statement.split():
+        if statement_token.strip() in ['for', 'while']:
+            return True
+    return False
 
 
