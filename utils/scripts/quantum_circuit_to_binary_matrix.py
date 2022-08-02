@@ -34,7 +34,7 @@
 # q-reg-2,0,0,0,1,0,0,1,0
 #
 # Or using its command line version as:
-#    python quantum_circuit_to_binary_matrix
+#    python quantum_circuit_to_binary_matrix.py
 #        --module-name <wrapper_name, e.g., wrapper_ch04_02_teleport_fly>
 #        --output-file <output_file, e.g., ch04_02_teleport_fly.csv>
 #
