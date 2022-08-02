@@ -37,11 +37,9 @@
 #    python quantum_circuit_to_binary_matrix.py
 #        --module-name <str, e.g., wrapper_ch04_02_teleport_fly>
 #        --output-file <path, e.g., ch04_02_teleport_fly.csv>
-#
 # ------------------------------------------------------------------------------
 
 import argparse
-import os
 import pathlib
 import importlib
 import sys
@@ -124,8 +122,8 @@ def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
 
 def main():
     parser = argparse.ArgumentParser(description='Convert a quantum circuit object into a matrix.')
-    parser.add_argument('--module-name', '-i', help="Module name that has the quantum circuit object `qc`", required=True, type=str)
-    parser.add_argument('--output-file', '-o', action='store', help="Output file", required=True, type=pathlib.Path)
+    parser.add_argument('--module-name', '-i', help='Module name that has the quantum circuit object `qc`', required=True, type=str)
+    parser.add_argument('--output-file', '-o', action='store', help='Output file', required=True, type=pathlib.Path)
     args = parser.parse_args()
 
     module_name: str = args.module_name

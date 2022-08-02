@@ -57,7 +57,7 @@ mkdir -p "$OUTPUT_DIR_PATH"    || die "[ERROR] Failed to create $OUTPUT_DIR_PATH
 # ------------------------------------------------------------------------- Main
 
 OUTPUT_FILE_PATH="$OUTPUT_DIR_PATH/$(echo $WRAPPER_NAME | sed 's|^wrapper_||').csv"
-echo "[DEBUG] Goint to process $WRAPPER_NAME (in $WRAPPER_FILE_PATH) and save it to $OUTPUT_FILE_PATH"
+echo "[DEBUG] Going to process $WRAPPER_NAME (in $WRAPPER_FILE_PATH) and save it to $OUTPUT_FILE_PATH"
 
 # Activate custom Python virtual environment
 _activate_virtual_environment
