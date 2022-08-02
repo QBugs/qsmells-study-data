@@ -1,5 +1,3 @@
-from quantum_circuit_to_binary_matrix import qc2matrix
-
 # ------------------------------------------------------------------------------
 # Based on: https://github.com/Qiskit/qiskit-terra/blob/0.21.0/test/python/algorithms/test_amplitude_estimators.py
 
@@ -74,8 +72,3 @@ fae = FasterAmplitudeEstimation(0.01, 5, rescale=False, quantum_instance=backend
 # ------------------------------------------------------------------------------
 
 qc = fae.construct_circuit(problem, k=5, measurement=True)
-qc2matrix(qc, 'fae.csv')
-
-# TODO move to another wrapper?
-qc.draw(output="text", filename="fae.txt", justify="none")
-qc.draw(output="mpl", filename="fae.pdf", justify="none")
