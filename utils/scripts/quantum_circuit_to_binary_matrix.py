@@ -47,6 +47,7 @@ import sys
 import numpy as np
 import pandas as pd
 
+from qiskit import transpile
 from qiskit.circuit import QuantumCircuit
 from qiskit.circuit.quantumcircuitdata import CircuitInstruction
 from qiskit.circuit.instruction import Instruction
@@ -130,7 +131,15 @@ def main():
     output_file: str = args.output_file.as_posix()
 
     wrapper = importlib.import_module(module_name)
-    qc2matrix(wrapper.qc, output_file)
+    # [Transpile](https://qiskit.org/documentation/apidoc/transpiler.html) the quantum circuit
+    # [How can I Transpile a Quantum Circuit?](https://www.youtube.com/watch?v=8mrPNSctRIg)
+    #
+    # "Transpilation is the process of rewriting a given input circuit to match the topology of
+    # a specific quantum device, and/or to optimize the circuit for execution on present day noisy
+    # quantum systems."
+    #
+    qc = transpile(wrapper.qc, basis_gates=['u1', 'u2', 'u3', 'rz', 'sx', 'x', 'cx', 'id'], optimization_level=0)
+    qc2matrix(qc, output_file)
 
     sys.exit(0)
 
