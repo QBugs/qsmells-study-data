@@ -33,8 +33,17 @@
 # q-reg-1,0,0,1,0,1,0,0,1
 # q-reg-2,0,0,0,1,0,0,1,0
 #
+# Or using its command line version as:
+#    python quantum_circuit_to_binary_matrix
+#        --module-name <wrapper_name, e.g., wrapper_ch04_02_teleport_fly>
+#        --output-file <output_file, e.g., ch04_02_teleport_fly.csv>
+#
 # ------------------------------------------------------------------------------
 
+import argparse
+import os
+import pathlib
+import importlib
 import sys
 
 import numpy as np
@@ -112,5 +121,22 @@ def qc2matrix(qc: QuantumCircuit, output_file_path) -> pd.DataFrame:
     df.to_csv(output_file_path, header=True, index=True, sep=';', mode='w')
 
     return(df)
+
+def main():
+    parser = argparse.ArgumentParser(description='Convert a quantum circuit object into a matrix.')
+    parser.add_argument('--module-name', '-i', help="Module name that has the quantum circuit object `qc`", required=True, type=str)
+    parser.add_argument('--output-file', '-o', action='store', help="Output file", required=True, type=pathlib.Path)
+    args = parser.parse_args()
+
+    module_name: str = args.module_name
+    output_file: str = args.output_file.as_posix()
+
+    wrapper = importlib.import_module(module_name)
+    qc2matrix(wrapper.qc, output_file)
+
+    sys.exit(0)
+
+if __name__ == "__main__":
+    main()
 
 # EOF
