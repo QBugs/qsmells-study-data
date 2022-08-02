@@ -1,4 +1,4 @@
-;h()-0;h()-1;t()-2;h()-3;cx()-4;barrier()-5;measure()-6;barrier()-7;measure()-8
+;u2(int,float)-0;u2(int,float)-1;u1(float)-2;u2(int,float)-3;cx()-4;barrier()-5;measure()-6;barrier()-7;measure()-8
 q-a-0;1;0;0;0;1;1;1;1;0
 q-b-0;0;1;1;1;1;1;0;1;1
 c-ac-0;0;0;0;0;0;0;1;0;0

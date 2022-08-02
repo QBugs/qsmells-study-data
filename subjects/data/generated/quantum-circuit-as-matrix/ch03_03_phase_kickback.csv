@@ -1,4 +1,4 @@
-;h()-0;h()-1;cu1(float)-2;cu1(float)-3
-q-reg1-0;1;0;1;0
-q-reg1-1;0;1;0;1
-q-reg2-0;0;0;1;1
+;u2(int,float)-0;u1(ParameterExpression)-1;u2(int,float)-2;u1(ParameterExpression)-3;cx()-4;u1(ParameterExpression)-5;cx()-6;u1(ParameterExpression)-7;cx()-8;u1(ParameterExpression)-9;cx()-10;u1(ParameterExpression)-11
+q-reg1-0;1;1;0;0;1;0;1;0;0;0;0;0
+q-reg1-1;0;0;1;1;0;0;0;0;1;0;1;0
+q-reg2-0;0;0;0;0;1;1;1;1;1;1;1;1

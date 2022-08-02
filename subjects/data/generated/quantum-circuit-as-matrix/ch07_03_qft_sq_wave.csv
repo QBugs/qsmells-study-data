@@ -1,5 +1,5 @@
-;h()-0;h()-1;h()-2;h()-3;rz(float)-4;barrier()-5;h()-6;cu1(float)-7;h()-8;cu1(float)-9;cu1(float)-10;h()-11;cu1(float)-12;cu1(float)-13;cu1(float)-14;h()-15;swap()-16;swap()-17
-q-signal-0;1;0;0;0;0;1;0;0;0;0;0;0;1;1;1;1;1;0
-q-signal-1;0;1;0;0;1;1;0;0;0;1;1;1;0;0;1;0;0;1
-q-signal-2;0;0;1;0;0;1;0;1;1;0;1;0;0;1;0;0;0;1
-q-signal-3;0;0;0;1;0;1;1;1;0;1;0;0;1;0;0;0;1;0
+;u2(int,float)-0;u2(int,float)-1;rz(float)-2;u2(int,float)-3;u2(int,float)-4;barrier()-5;u1(ParameterExpression)-6;u1(ParameterExpression)-7;u1(ParameterExpression)-8;u2(int,float)-9;cx()-10;u1(ParameterExpression)-11;cx()-12;u2(int,float)-13;u1(ParameterExpression)-14;cx()-15;u1(ParameterExpression)-16;cx()-17;u1(ParameterExpression)-18;cx()-19;u1(ParameterExpression)-20;cx()-21;u2(int,float)-22;u1(ParameterExpression)-23;u1(ParameterExpression)-24;cx()-25;u1(ParameterExpression)-26;cx()-27;u1(ParameterExpression)-28;cx()-29;u1(ParameterExpression)-30;cx()-31;u1(ParameterExpression)-32;cx()-33;u1(ParameterExpression)-34;cx()-35;u2(int,float)-36;u1(ParameterExpression)-37;u1(ParameterExpression)-38;cx()-39;cx()-40;cx()-41;u1(ParameterExpression)-42;cx()-43;cx()-44;cx()-45
+q-signal-0;1;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;1;0;1;1;1;0;1;1;0;0;0;0;0;0;1;1;1
+q-signal-1;0;1;1;0;0;1;0;1;0;0;0;0;0;0;0;1;0;1;1;1;0;1;1;0;0;0;0;0;0;0;0;0;0;1;1;1;0;1;0;1;1;1;0;0;0;0
+q-signal-2;0;0;0;1;0;1;0;0;1;0;1;0;1;1;0;0;0;0;0;1;1;1;0;1;0;0;0;0;0;1;1;1;0;0;0;0;0;0;1;1;1;1;0;0;0;0
+q-signal-3;0;0;0;0;1;1;0;0;0;1;1;1;1;0;1;1;1;1;0;0;0;0;0;0;1;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;1

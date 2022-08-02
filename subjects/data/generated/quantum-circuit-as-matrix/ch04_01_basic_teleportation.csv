@@ -1,4 +1,4 @@
-;h()-0;cx()-1;barrier()-2;reset()-3;h()-4;rz(float)-5;h()-6;barrier()-7;cx()-8;h()-9;measure()-10;measure()-11;barrier()-12;x()-13;z()-14;h()-15;rz(float)-16;h()-17;measure()-18
+;u2(int,float)-0;cx()-1;barrier()-2;reset()-3;u2(int,float)-4;rz(float)-5;u2(int,float)-6;barrier()-7;cx()-8;u2(int,float)-9;measure()-10;measure()-11;barrier()-12;x()-13;u1(float)-14;u2(int,float)-15;rz(float)-16;u2(int,float)-17;measure()-18
 q-alice-0;0;0;1;1;1;1;1;1;1;1;1;0;1;0;0;0;0;0;0
 q-ep-0;1;1;1;0;0;0;0;1;1;0;0;1;1;0;0;0;0;0;0
 q-bob-0;0;1;1;0;0;0;0;1;0;0;0;0;1;1;1;1;1;1;1
