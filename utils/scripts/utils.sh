@@ -34,6 +34,9 @@ _activate_virtual_environment() {
   [ -d "$OREILLY_SAMPLES_DIR" ] || die "[ERROR] $OREILLY_SAMPLES_DIR does not exist!"
   export PYTHONPATH="$OREILLY_SAMPLES_DIR:$PYTHONPATH"
 
+  # Augment Python's PATH with our custom made scripts
+  export PYTHONPATH="$UTILS_SCRIPT_DIR:$PYTHONPATH"
+
   return 0
 }
 
