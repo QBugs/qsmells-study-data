@@ -28,7 +28,7 @@ if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ];
   die "$USAGE"
 fi
 
-SUBJECTS_FILE_PATH="../data/subjects.csv"
+SUBJECTS_FILE_PATH="$SCRIPT_DIR/../data/subjects.csv"
 OUTPUT_FILE_PATH="$SCRIPT_DIR/../data/generated/subjects-locs.csv"
 
 while [[ "$1" = --* ]]; do
@@ -37,8 +37,8 @@ while [[ "$1" = --* ]]; do
     (--subjects_file_path)
       SUBJECTS_FILE_PATH=$1;
       shift;;
-    (--output_dir_path)
-      OUTPUT_DIR_PATH=$1;
+    (--output_file_path)
+      OUTPUT_FILE_PATH=$1;
       shift;;
     (--help)
       echo "$USAGE"

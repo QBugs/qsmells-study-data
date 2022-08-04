@@ -25,7 +25,7 @@ if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] 
   die "$USAGE"
 fi
 
-SUBJECTS_FILE_PATH="../data/subjects.csv"
+SUBJECTS_FILE_PATH="$SCRIPT_DIR/../data/subjects.csv"
 MATRICES_DIR_PATH="$SCRIPT_DIR/../data/generated/quantum-circuit-as-matrix"
 OUTPUT_FILE_PATH="$SCRIPT_DIR/../data/generated/matrices-data.csv"
 
