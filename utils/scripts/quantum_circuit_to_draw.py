@@ -38,7 +38,7 @@ def main():
     # quantum systems."
     #
     qc = transpile(wrapper.qc, basis_gates=['u1', 'u2', 'u3', 'rz', 'sx', 'x', 'cx', 'id'], optimization_level=0)
-    qc.draw(output=output_type, filename=output_file, justify='none')
+    qc.draw(output=output_type, filename=output_file, justify='left')
 
     sys.exit(0)
 
