@@ -268,11 +268,6 @@ def main():
     transpile_circuit: bool = args.transpile_circuit
     output_file: str        = args.output_file.as_posix()
 
-    print("module_name: " + module_name)
-    print("justify: " + str(justify))
-    print("transpile: " + str(transpile_circuit) + " :: " + str(type(transpile)))
-    print("output_file: " + output_file)
-
     wrapper = importlib.import_module(module_name)
     qc = wrapper.qc
     # [Transpile](https://qiskit.org/documentation/apidoc/transpiler.html) the quantum circuit
