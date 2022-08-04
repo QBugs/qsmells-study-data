@@ -1,5 +1,5 @@
-;u2(int,float)-0;rz(float)-1;u2(int,float)-2;rz(float)-3;rz(float)-4;u2(int,float)-5;rz(float)-6;rz(float)-7;rz(float)-8;rz(float)-9;u2(int,float)-10;rz(float)-11;rz(float)-12;rz(float)-13;rz(float)-14;rz(float)-15;rz(float)-16;rz(float)-17;rz(float)-18
-q-signal-0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
-q-signal-1;0;0;1;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0
-q-signal-2;0;0;0;0;0;1;1;1;1;1;0;0;0;0;0;0;0;0;0
-q-signal-3;0;0;0;0;0;0;0;0;0;0;1;1;1;1;1;1;1;1;1
+;1;2;3;4;5;6;7;8;9
+q-signal-0;h();rz(float);;;;;;;
+q-signal-1;h();rz(float);rz(float);;;;;;
+q-signal-2;h();rz(float);rz(float);rz(float);rz(float);;;;
+q-signal-3;h();rz(float);rz(float);rz(float);rz(float);rz(float);rz(float);rz(float);rz(float)

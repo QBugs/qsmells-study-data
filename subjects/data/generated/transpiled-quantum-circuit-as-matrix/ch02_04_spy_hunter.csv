@@ -1,0 +1,9 @@
+;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27
+q-alice-0;reset();u2(int,float);measure();reset();u2(int,float);measure();reset();x();u2(int,float);cx();cx();cx();barrier();;;;;;barrier();;;;;;;;
+q-fiber-0;;;;;;;;;;cx();cx();cx();barrier();u2(int,float);measure();reset();x();u2(int,float);barrier();;;;cx();cx();cx();;
+q-bob-0;;;;;;;;;;;;;barrier();;;;;;barrier();reset();u2(int,float);measure();cx();cx();cx();u2(int,float);measure()
+c-ahad-0;;;measure();;;;;;u2(int,float);;;;;;;;;;;;;;;;;;
+c-aval-0;;;;;;measure();;x();;;;;;;;;;;;;;;;;;;
+c-fval-0;;;;;;;;;;;;;;;measure();;x();;;;;;;;;;
+c-bhad-0;;;;;;;;;;;;;;;;;;;;;;measure();;;;u2(int,float);
+c-bval-0;;;;;;;;;;;;;;;;;;;;;;;;;;;measure()

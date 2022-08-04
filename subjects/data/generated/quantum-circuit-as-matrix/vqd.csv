@@ -1,3 +1,3 @@
-;u3(ParameterExpression,ParameterExpression,ParameterExpression)-0;rz(ParameterExpression)-1;u3(ParameterExpression,ParameterExpression,ParameterExpression)-2;rz(ParameterExpression)-3;cx()-4;u3(ParameterExpression,ParameterExpression,ParameterExpression)-5;rz(ParameterExpression)-6;u3(ParameterExpression,ParameterExpression,ParameterExpression)-7;rz(ParameterExpression)-8
-q-q-0;1;1;0;0;1;1;1;0;0
-q-q-1;0;0;1;1;1;0;0;1;1
+;1
+q-q-0;EfficientSU2(ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression)
+q-q-1;EfficientSU2(ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression,ParameterExpression)

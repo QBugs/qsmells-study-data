@@ -1,5 +1,5 @@
-;u2(int,float)-0;u2(int,float)-1;u1(float)-2;u2(int,float)-3;cx()-4;barrier()-5;measure()-6;barrier()-7;measure()-8
-q-a-0;1;0;0;0;1;1;1;1;0
-q-b-0;0;1;1;1;1;1;0;1;1
-c-ac-0;0;0;0;0;0;0;1;0;0
-c-bc-0;0;0;0;0;0;0;0;0;1
+;1;2;3;4;5;6;7;8
+q-a-0;h();;;cx();barrier();measure();barrier();
+q-b-0;h();t();h();cx();barrier();;barrier();measure()
+c-ac-0;;;;;;measure();;
+c-bc-0;;;;;;;;measure()
