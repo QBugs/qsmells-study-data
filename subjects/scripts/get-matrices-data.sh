@@ -38,8 +38,8 @@ while [[ "$1" = --* ]]; do
     (--matrices_dir_path)
       MATRICES_DIR_PATH=$1;
       shift;;
-    (--output_dir_path)
-      OUTPUT_DIR_PATH=$1;
+    (--output_file_path)
+      OUTPUT_FILE_PATH=$1;
       shift;;
     (--help)
       echo "$USAGE"
