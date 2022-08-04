@@ -24,7 +24,7 @@ OUTPUT_FILE <- args[1]
 # Load subject's data
 subjects <- load_CSV('../data/subjects.csv') # origin,name,path
 locs     <- load_CSV('../data/generated/subjects-locs.csv') # origin,name,path,lines_of_code
-matrices <- load_CSV('../data/generated/matrices-data.csv') # origin,name,path,num_qubits,num_clbits,num_ops
+matrices <- load_CSV('../data/generated/transpiled-matrices-data.csv') # origin,name,path,num_qubits,num_clbits,num_ops
 
 df <- merge(subjects, merge(locs, matrices, by=c('origin', 'name', 'path'), all=TRUE), by=c('origin', 'name', 'path'), all=TRUE)
 df$'module' <- sapply(df$'path', FUN = function(x) unlist(strsplit(x, '/'))[1])
@@ -72,6 +72,14 @@ for (origin in sort(unique(df$'origin'))) {
       cat(' \\\\\n', sep='')
     }
   }
+
+  cat('\\midrule\n', sep='')
+  cat('\\textit{Average}', sep='')
+  cat(' & ', sprintf('%.2f', round(mean(df$'lines_of_code'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(mean(df$'num_qubits'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(mean(df$'num_clbits'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(mean(df$'num_ops'[origin_mask]), 2)), sep='')
+  cat(' \\\\\n', sep='')
 }
 
 # Table's footer
