@@ -72,7 +72,7 @@ while read -r row; do
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
 
-    bash "$SCRIPT_DIR/run-qsmell.sh" \
+    time bash "$SCRIPT_DIR/run-qsmell.sh" \
       --matrix_file_path "$matrix_file_path" \
       --smell_metric "$smell_metric" \
       --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
