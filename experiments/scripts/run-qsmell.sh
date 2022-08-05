@@ -73,8 +73,8 @@ python -m qsmell \
 
 # Augment CSV file with runtime information
 SUBJECT_NAME="$(basename $MATRIX_FILE_PATH | sed 's|.csv||')"
-head -n1   "$OUTPUT_FILE_PATH" | sed 's|^|name,smell_metric,|' > "$OUTPUT_FILE_PATH.tmp"
-tail -n +2 "$OUTPUT_FILE_PATH" | sed "s|^|$SUBJECT_NAME,$SMELL_METRIC,|g" >> "$OUTPUT_FILE_PATH.tmp"
+head -n1   "$OUTPUT_FILE_PATH" | sed 's|^|name,|' > "$OUTPUT_FILE_PATH.tmp"
+tail -n +2 "$OUTPUT_FILE_PATH" | sed "s|^|$SUBJECT_NAME,|g" >> "$OUTPUT_FILE_PATH.tmp"
 mv "$OUTPUT_FILE_PATH.tmp" "$OUTPUT_FILE_PATH"
 
 # Deactivate custom Python virtual environment
