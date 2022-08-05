@@ -64,7 +64,7 @@ touch "$OUTPUT_FILE_PATH"
 # ------------------------------------------------------------------------- Args
 
 # Activate custom Python virtual environment
-_activate_virtual_environment
+_activate_virtual_environment || die "[ERROR] Failed to activate virtual environment!"
 
 python -m qsmell \
   --smell-metric "$SMELL_METRIC" \
