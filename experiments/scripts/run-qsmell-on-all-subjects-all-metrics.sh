@@ -63,17 +63,32 @@ while read -r row; do
     origin=$(echo "$row" | cut -f1 -d',')
       name=$(echo "$row" | cut -f2 -d',')
   filepath=$(echo "$row" | cut -f3 -d',')
+  filepath="$SCRIPT_DIR/../../tools/$filepath"
+  [ -s "$filepath" ] || die "[ERROR] $filepath does not exist or it is empty!"
 
   matrix_file_path="$MATRICES_DIR_PATH/$name.csv"
   [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
 
-  for smell_metric in "CG" "ROC" "NC" "LC" "IM" "IdQ" "IQ" "AQ" "LPQ"; do
+  # Quantum Smell that require a matrix
+  for smell_metric in "CG" "ROC" "NC" "LC" "IM" "IdQ" "IQ" "AQ"; do
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
 
     time bash "$SCRIPT_DIR/run-qsmell.sh" \
       --matrix_file_path "$matrix_file_path" \
+      --smell_metric "$smell_metric" \
+      --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
+  done
+
+  # Quantum Smell that require source code
+  for smell_metric in "LPQ"; do
+    output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
+    output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
+    rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
+
+    time bash "$SCRIPT_DIR/run-qsmell.sh" \
+      --input_file_path "$filepath" \
       --smell_metric "$smell_metric" \
       --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
   done
