@@ -34,7 +34,7 @@ if ('LC' %in% metrics_data$'metric') {
   metrics_data$'value'[metrics_data$'metric' == 'LC'] <- (1 - 0.03512)^(metrics_data$'value'[metrics_data$'metric' == 'LC'])
 }
 metrics_data$'value' <- as.numeric(metrics_data$'value')
-# Compute set of metrics
+# Order set of metrics
 metrics           <- sort(unique(metrics_data$'metric')) # FIXME we might want a custom sort to match the order in the paper
 
 df <- merge(subjects, metrics_data, by=c('name'), all=TRUE)
