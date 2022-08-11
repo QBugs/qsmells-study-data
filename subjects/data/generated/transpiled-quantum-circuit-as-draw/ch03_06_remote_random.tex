@@ -1,0 +1,14 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{a} :  } & \lstick{{a} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \qw & \qw & \ctrl{1} \barrier[0em]{1} & \qw & \meter \barrier[0em]{1} & \qw & \qw & \qw & \qw\\
+	 	\nghost{{b} :  } & \lstick{{b} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \targ & \qw & \qw & \qw & \meter & \qw & \qw\\
+	 	\nghost{\mathrm{{ac} :  }} & \lstick{\mathrm{{ac} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-2,0] & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{bc} :  }} & \lstick{\mathrm{{bc} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-2,0] & \cw & \cw\\
+\\ }}
+\end{document}

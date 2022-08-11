@@ -1,0 +1,18 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{alice} :  } & \lstick{{alice} :  } & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \ctrl{1} & \targ & \ctrl{1} \barrier[0em]{2} & \qw & \qw & \qw & \qw & \qw & \qw \barrier[0em]{2} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\nghost{{fiber} :  } & \lstick{{fiber} :  } & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \targ & \ctrl{-1} & \targ & \qw & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \qw & \qw & \qw & \qw & \ctrl{1} & \targ & \ctrl{1} & \qw & \qw & \qw & \qw\\
+	 	\nghost{{bob} :  } & \lstick{{bob} :  } & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \targ & \ctrl{-1} & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \qw & \qw\\
+	 	\nghost{\mathrm{{ahad} :  }} & \lstick{\mathrm{{ahad} :  }} & \lstick{/_{_{1}}} \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-3,0] & \cw & \cw & \cw & \cw & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-3] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{aval} :  }} & \lstick{\mathrm{{aval} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-4,0] & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-4] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{fval} :  }} & \lstick{\mathrm{{fval} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-4,0] & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-4] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{bhad} :  }} & \lstick{\mathrm{{bhad} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-4,0] & \cw & \cw & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-4] & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{bval} :  }} & \lstick{\mathrm{{bval} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-5,0] & \cw & \cw\\
+\\ }}
+\end{document}

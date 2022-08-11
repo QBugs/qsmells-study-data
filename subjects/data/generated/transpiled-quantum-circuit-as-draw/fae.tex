@@ -1,0 +1,13 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{{$\mathrm{global\,phase:\,} \mathrm{\pi}$}
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_3}\,(\mathrm{-0.927295218001612,0.0,0.0})} & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{X}} & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_3}\,(\mathrm{-0.927295218001612,0.0,0.0})} & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{X}} & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_3}\,(\mathrm{-0.927295218001612,0.0,0.0})} & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{X}} & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_3}\,(\mathrm{-0.927295218001612,0.0,0.0})} & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{X}} & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_3}\,(\mathrm{-0.927295218001612,0.0,0.0})} & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{X}} & \gate{\mathrm{U_3}\,(\mathrm{0.927295218001612,0.0,0.0})} \barrier[0em]{1} & \qw & \meter & \qw & \qw & \qw\\
+	 	\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \meter & \qw & \qw\\
+	 	\nghost{\mathrm{{c0} :  }} & \lstick{\mathrm{{c0} :  }} & \lstick{/_{_{2}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-2,0] & \dstick{_{_{\hspace{0.0em}1}}} \cw \ar @{<=} [-1,0] & \cw & \cw\\
+\\ }}
+\end{document}

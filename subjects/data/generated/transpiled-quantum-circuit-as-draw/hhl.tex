@@ -1,0 +1,12 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{2}})} & \gate{\mathrm{U_3}\,(\mathrm{1.37544575386937,0.0,0.0})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{2.65498531952262,0.0,0.0})} & \qw & \qw\\
+	 	\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \gate{\mathrm{U_3}\,(\mathrm{-2.32275379780981,\pi,-\pi})} & \qw & \ctrl{-1} & \qw & \qw & \qw\\
+\\ }}
+\end{document}

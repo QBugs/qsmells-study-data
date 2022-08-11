@@ -1,0 +1,16 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{alice} :  } & \lstick{{alice} :  } & \qw & \qw \barrier[0em]{2} & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{R_Z}\,(\mathrm{\frac{\pi}{4}})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} \barrier[0em]{2} & \qw & \ctrl{1} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter \barrier[0em]{2} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\nghost{{ep} :  } & \lstick{{ep} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \ctrl{1} & \qw & \qw & \qw & \qw & \qw & \qw & \targ & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\nghost{{bob} :  } & \lstick{{bob} :  } & \qw & \targ & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{\mathrm{X}} & \gate{\mathrm{U_1}\,(\mathrm{\pi})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{4}})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \qw & \qw\\
+	 	\nghost{\mathrm{{alicec} :  }} & \lstick{\mathrm{{alicec} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-3,0] & \cw & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-1] & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{epc} :  }} & \lstick{\mathrm{{epc} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-3,0] & \cw & \cw & \control \cw^(0.0){^{\mathtt{0x1}}} \cwx[-2] & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{bobc} :  }} & \lstick{\mathrm{{bobc} :  }} & \lstick{/_{_{1}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-3,0] & \cw & \cw\\
+\\ }}
+\end{document}

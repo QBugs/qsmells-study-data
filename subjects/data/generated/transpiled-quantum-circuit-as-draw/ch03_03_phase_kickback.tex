@@ -1,0 +1,13 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{reg1}_{0} :  } & \lstick{{reg1}_{0} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{8}})} & \ctrl{2} & \qw & \ctrl{2} & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+	 	\nghost{{reg1}_{1} :  } & \lstick{{reg1}_{1} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \ctrl{1} & \qw & \qw & \qw\\
+	 	\nghost{{reg2} :  } & \lstick{{reg2} :  } & \qw & \qw & \targ & \gate{\mathrm{U_1}\,(\mathrm{-\frac{\pi}{8}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{8}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{-\frac{\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \qw & \qw\\
+\\ }}
+\end{document}

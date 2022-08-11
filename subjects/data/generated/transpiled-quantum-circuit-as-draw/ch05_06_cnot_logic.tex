@@ -1,0 +1,16 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{a} :  } & \lstick{{a} :  } & \qw & \qw & \qw \barrier[0em]{2} & \qw & \qw & \qw & \qw & \qw & \qw \barrier[0em]{2} & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \qw & \qw & \ctrl{2} & \qw & \qw & \qw & \ctrl{2} & \ctrl{1} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \ctrl{1} & \meter & \qw & \qw & \qw\\
+	 	\nghost{{b} :  } & \lstick{{b} :  } & \qw & \qw & \qw & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \ctrl{1} & \meter & \qw & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \qw & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \qw & \meter & \qw & \qw\\
+	 	\nghost{{c} :  } & \lstick{{c} :  } & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{X}} & \meter & \qw & \gate{\mathrm{\left|0\right\rangle}} & \qw & \targ & \qw & \meter & \qw & \gate{\mathrm{\left|0\right\rangle}} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \meter & \qw & \qw & \qw & \qw\\
+	 	\nghost{\mathrm{{r1} :  }} & \lstick{\mathrm{{r1} :  }} & \lstick{/_{_{1}}} \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-1,0] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{r2} :  }} & \lstick{\mathrm{{r2} :  }} & \lstick{/_{_{2}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-3,0] & \dstick{_{_{\hspace{0.0em}1}}} \cw \ar @{<=} [-2,0] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+	 	\nghost{\mathrm{{r3} :  }} & \lstick{\mathrm{{r3} :  }} & \lstick{/_{_{3}}} \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \dstick{_{_{\hspace{0.0em}2}}} \cw \ar @{<=} [-3,0] & \dstick{_{_{\hspace{0.0em}0}}} \cw \ar @{<=} [-5,0] & \dstick{_{_{\hspace{0.0em}1}}} \cw \ar @{<=} [-4,0] & \cw & \cw\\
+\\ }}
+\end{document}

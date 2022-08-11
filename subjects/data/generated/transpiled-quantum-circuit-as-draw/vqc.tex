@@ -1,0 +1,12 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{2.0*x[0]})} & \ctrl{1} & \qw & \ctrl{1} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{2.0*x[0]})} & \ctrl{1} & \qw & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{{\ensuremath{\theta}}[0],0.0,0.0})} & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{{\ensuremath{\theta}}[2],0.0,0.0})} & \qw & \qw\\
+	 	\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{2.0*x[1]})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{2.0*(\pi\,-\,x[0])*(\pi\,-\,x[1])})} & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_1}\,(\mathrm{2.0*x[1]})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{2.0*(\pi\,-\,x[0])*(\pi\,-\,x[1])})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{{\ensuremath{\theta}}[1],0.0,0.0})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{{\ensuremath{\theta}}[3],0.0,0.0})} & \qw & \qw\\
+\\ }}
+\end{document}
