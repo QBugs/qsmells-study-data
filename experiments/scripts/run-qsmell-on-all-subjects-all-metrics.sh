@@ -9,6 +9,7 @@
 # run-qsmell-on-all-subjects-all-metrics.sh
 #   [--subjects_file_path <path, e.g., ../data/subjects.csv>]
 #   [--matrices_dir_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix]
+#   [--transpiled_matrices_dir_path <path, e.g., ../../subjects/data/generated/transpiled-quantum-circuit-as-matrix]
 #   [--output_dir_path <path, e.g., ../data/generated/qsmell-metrics>]
 #   [help]
 # ------------------------------------------------------------------------------
@@ -18,13 +19,14 @@ source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} [--subjects_file_path <path, e.g., ../data/subjects.csv>] [--matrices_dir_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix] [--output_dir_path <path, e.g., ../data/generated/qsmell-metrics>] [help]"
-if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] && [ "$#" -ne "6" ]; then
+USAGE="Usage: ${BASH_SOURCE[0]} [--subjects_file_path <path, e.g., ../data/subjects.csv>] [--matrices_dir_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix] [--transpiled_matrices_dir_path <path, e.g., ../../subjects/data/generated/transpiled-quantum-circuit-as-matrix] [--output_dir_path <path, e.g., ../data/generated/qsmell-metrics>] [help]"
+if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] && [ "$#" -ne "6" ] && [ "$#" -ne "8" ]; then
   die "$USAGE"
 fi
 
 SUBJECTS_FILE_PATH="$SCRIPT_DIR/../../subjects/data/subjects.csv"
 MATRICES_DIR_PATH="$SCRIPT_DIR/../../subjects/data/generated/quantum-circuit-as-matrix"
+TRANSPILED_MATRICES_DIR_PATH="$SCRIPT_DIR/../../subjects/data/generated/transpiled-quantum-circuit-as-matrix"
 OUTPUT_DIR_PATH="$SCRIPT_DIR/../data/generated/qsmell-metrics"
 
 while [[ "$1" = --* ]]; do
@@ -35,6 +37,9 @@ while [[ "$1" = --* ]]; do
       shift;;
     (--matrices_dir_path)
       MATRICES_DIR_PATH=$1;
+      shift;;
+    (--transpiled_matrices_dir_path)
+      TRANSPILED_MATRICES_DIR_PATH=$1;
       shift;;
     (--output_dir_path)
       OUTPUT_DIR_PATH=$1;
@@ -50,10 +55,12 @@ done
 # Check whether all arguments have been initialized
 [ "$SUBJECTS_FILE_PATH" != "" ] || die "[ERROR] Missing --subjects_file_path argument!"
 [ "$MATRICES_DIR_PATH" != "" ]  || die "[ERROR] Missing --matrices_dir_path argument!"
+[ "$TRANSPILED_MATRICES_DIR_PATH" != "" ] || die "[ERROR] Missing --transpiled_matrices_dir_path argument!"
 [ "$OUTPUT_DIR_PATH" != "" ]    || die "[ERROR] Missing --output_dir_path argument!"
 # Check whether input files exit and it is not empty
 [ -s "$SUBJECTS_FILE_PATH" ]    || die "[ERROR] $SUBJECTS_FILE_PATH does not exist or it is empty!"
 [ -d "$MATRICES_DIR_PATH" ]     || die "[ERROR] $MATRICES_DIR_PATH does not exist!"
+[ -d "$TRANSPILED_MATRICES_DIR_PATH" ] || die "[ERROR] $TRANSPILED_MATRICES_DIR_PATH does not exist!"
 # Create output directory
 mkdir -p "$OUTPUT_DIR_PATH"
 
@@ -66,17 +73,22 @@ while read -r row; do
   filepath="$SCRIPT_DIR/../../tools/$filepath"
   [ -s "$filepath" ] || die "[ERROR] $filepath does not exist or it is empty!"
 
-  matrix_file_path="$MATRICES_DIR_PATH/$name.csv"
-  [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
-
   # Quantum Smell that require a matrix
-  for smell_metric in "CG" "ROC" "LC" "IM" "IdQ" "IQ" "AQ"; do
+  for smell_metric in "CG" "ROC" "LC" "IM" "IdQ" "IQ"; do
+    matrix_file_path="$MATRICES_DIR_PATH/$name.csv"
+    # For the CG metric we must use the non-transpile matrix, as no unitary
+    # gate is in the transpile version
+    if [ "$smell_metric" == "CG" ]; then
+      matrix_file_path="$TRANSPILED_MATRICES_DIR_PATH/$name.csv"
+    fi
+    [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
+
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
 
     time bash "$SCRIPT_DIR/run-qsmell.sh" \
-      --matrix_file_path "$matrix_file_path" \
+      --input_file_path "$matrix_file_path" \
       --smell_metric "$smell_metric" \
       --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
   done
