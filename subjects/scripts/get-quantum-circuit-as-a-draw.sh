@@ -9,13 +9,21 @@
 #   --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_ch04_02_teleport_fly>
 #   [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-draw>]
 #   [help]
+#
+# Requirements:
+# - [ImageMagick](https://imagemagick.org/index.php) installed and available
 # ------------------------------------------------------------------------------
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null 2>&1 && pwd)"
 source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
+# -------------------------------------------------------------------------- Env
+
 WRAPPERS_DIR_PATH="$SCRIPT_DIR/wrappers"
 [ -d "$WRAPPERS_DIR_PATH" ] || die "[ERROR] $WRAPPERS_DIR_PATH does not exist!"
+
+# Sanity check whether `convert` is available
+convert --version > /dev/null 2>&1 || die "[ERROR] Failed to find the convert executable from the [ImageMagick](https://imagemagick.org/index.php) package."
 
 # ------------------------------------------------------------------------- Args
 
@@ -76,6 +84,10 @@ _run_script() {
     --module-name "$WRAPPER_NAME" \
     --output-type "$output_type" \
     --output-file "$output_file_path" || die "[ERROR] Failed to execute $WRAPPER_FILE_PATH!"
+
+  if [ "$output_file_ext" == ".pdf" ]; then
+    convert -density 300 "$output_file_path" -quality 100 $(echo "$output_file_path" | sed 's|.pdf$|.png|')
+  fi
 }
 
 _run_script "text"         ".txt"
