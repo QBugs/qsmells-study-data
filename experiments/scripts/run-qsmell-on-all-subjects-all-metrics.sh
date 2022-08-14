@@ -75,11 +75,11 @@ while read -r row; do
 
   # Quantum Smell that require a matrix
   for smell_metric in "CG" "ROC" "LC" "IM" "IdQ" "IQ"; do
-    matrix_file_path="$MATRICES_DIR_PATH/$name.csv"
+    matrix_file_path="$TRANSPILED_MATRICES_DIR_PATH/$name.csv"
     # For the CG metric we must use the non-transpile matrix, as no unitary
     # gate is in the transpile version
     if [ "$smell_metric" == "CG" ]; then
-      matrix_file_path="$TRANSPILED_MATRICES_DIR_PATH/$name.csv"
+      matrix_file_path="$MATRICES_DIR_PATH/$name.csv"
     fi
     [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
 
