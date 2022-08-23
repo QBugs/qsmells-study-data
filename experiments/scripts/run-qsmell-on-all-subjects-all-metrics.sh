@@ -73,7 +73,7 @@ while read -r row; do
   filepath="$SCRIPT_DIR/../../tools/$filepath"
   [ -s "$filepath" ] || die "[ERROR] $filepath does not exist or it is empty!"
 
-  # Quantum Smell that require a matrix
+  # Quantum Smells that require a matrix
   for smell_metric in "CG" "ROC" "LC" "IM" "IdQ" "IQ"; do
     matrix_file_path="$TRANSPILED_MATRICES_DIR_PATH/$name.csv"
     # For the CG metric we must use the non-transpile matrix, as no unitary
@@ -93,7 +93,7 @@ while read -r row; do
       --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
   done
 
-  # Quantum Smell that require source code
+  # Quantum Smells that require source code
   for smell_metric in "NC" "LPQ"; do
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
