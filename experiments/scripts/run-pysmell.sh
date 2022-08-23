@@ -64,16 +64,19 @@ touch "$OUTPUT_FILE_PATH"
 _activate_virtual_environment || die "[ERROR] Failed to activate virtual environment!"
 
 echo "[DEBUG] Running PySmell on $INPUT_FILE_PATH"
+start=$SECONDS
 python -m pysmell \
   --smell-metric "$SMELL_METRIC" \
   --py-file-to-analyze "$INPUT_FILE_PATH" \
   --output-file "$OUTPUT_FILE_PATH" || die "[ERROR] Failed to run PySmell on $INPUT_FILE_PATH!"
 [ -s "$OUTPUT_FILE_PATH" ] || die "[ERROR] $OUTPUT_FILE_PATH does not exist or it is empty!"
+end=$SECONDS
+runtime=$(echo "$end - $start" | bc -l)
 
 # Augment CSV file with runtime information
 SUBJECT_NAME="$(basename $INPUT_FILE_PATH | sed 's|.py$||')"
-head -n1   "$OUTPUT_FILE_PATH" | sed 's|^|name,|' > "$OUTPUT_FILE_PATH.tmp"
-tail -n +2 "$OUTPUT_FILE_PATH" | sed "s|^|$SUBJECT_NAME,|g" >> "$OUTPUT_FILE_PATH.tmp"
+head -n1   "$OUTPUT_FILE_PATH" | sed 's|^|name,runtime,|' > "$OUTPUT_FILE_PATH.tmp"
+tail -n +2 "$OUTPUT_FILE_PATH" | sed "s|^|$SUBJECT_NAME,$runtime,|g" >> "$OUTPUT_FILE_PATH.tmp"
 mv "$OUTPUT_FILE_PATH.tmp" "$OUTPUT_FILE_PATH"
 
 # Deactivate custom Python virtual environment

@@ -71,7 +71,7 @@ while read -r row; do
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
 
-    time bash "$SCRIPT_DIR/run-pysmell.sh" \
+    bash "$SCRIPT_DIR/run-pysmell.sh" \
       --input_file_path "$python_file_path" \
       --smell_metric "$smell_metric" \
       --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-pysmell.sh on $python_file_path!"
