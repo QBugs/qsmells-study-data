@@ -83,6 +83,7 @@ while read -r row; do
     fi
     [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
 
+    job_log_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/job.log"
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
@@ -90,11 +91,12 @@ while read -r row; do
     bash "$SCRIPT_DIR/run-qsmell.sh" \
       --input_file_path "$matrix_file_path" \
       --smell_metric "$smell_metric" \
-      --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
+      --output_file_path "$output_file_path" > "$job_log_file_path" 2>&1 || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
   done
 
   # Quantum Smells that require source code
   for smell_metric in "NC" "LPQ"; do
+    job_log_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/job.log"
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
@@ -102,7 +104,7 @@ while read -r row; do
     bash "$SCRIPT_DIR/run-qsmell.sh" \
       --input_file_path "$filepath" \
       --smell_metric "$smell_metric" \
-      --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
+      --output_file_path "$output_file_path" > "$job_log_file_path" 2>&1 || die "[ERROR] Failed to execute run-qsmell.sh on $matrix_file_path!"
   done
 done < <(tail -n +2 "$SUBJECTS_FILE_PATH")
 
