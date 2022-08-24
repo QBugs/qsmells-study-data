@@ -92,6 +92,12 @@ while read -r row; do
     [ -s "$matrix_file_path" ] || die "[ERROR] $matrix_file_path does not exist or it is empty!"
 
     job_log_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/job.log"
+    if [ -f "$job_log_file_path" ]; then
+      if tail -n1 "$job_log_file_path" | grep -q "^DONE\!$"; then
+        # Avoid re-computing already computed data
+        continue
+      fi
+    fi
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
@@ -105,6 +111,12 @@ while read -r row; do
   # Quantum Smells that require source code
   for smell_metric in "NC" "LPQ"; do
     job_log_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/job.log"
+    if [ -f "$job_log_file_path" ]; then
+      if tail -n1 "$job_log_file_path" | grep -q "^DONE\!$"; then
+        # Avoid re-computing already computed data
+        continue
+      fi
+    fi
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
