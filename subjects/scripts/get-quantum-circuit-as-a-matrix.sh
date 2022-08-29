@@ -8,7 +8,7 @@
 #
 # Usage:
 # get-quantum-circuit-as-a-matrix.sh
-#   --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_ch04_02_teleport_fly>
+#   --wrapper_name <name of the wrapper program to load and analyze, e.g., grover>
 #   [--transpile <bool, false by default>]
 #   [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>]
 #   [help]
@@ -22,7 +22,7 @@ WRAPPERS_DIR_PATH="$SCRIPT_DIR/wrappers"
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_ch04_02_teleport_fly> [--transpile <bool, false by default>] [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>] [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., grover> [--transpile <bool, false by default>] [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>] [help]"
 if [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] && [ "$#" -ne "6" ]; then
   die "$USAGE"
 fi

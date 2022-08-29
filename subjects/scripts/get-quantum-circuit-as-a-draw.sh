@@ -6,7 +6,7 @@
 #
 # Usage:
 # get-quantum-circuit-as-a-draw.sh
-#   --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_ch04_02_teleport_fly>
+#   --wrapper_name <name of the wrapper program to load and analyze, e.g., grover>
 #   [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-draw>]
 #   [help]
 #
@@ -27,7 +27,7 @@ convert --version > /dev/null 2>&1 || die "[ERROR] Failed to find the convert ex
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_ch04_02_teleport_fly> [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-draw>] [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., grover> [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-draw>] [help]"
 if [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ]; then
   die "$USAGE"
 fi

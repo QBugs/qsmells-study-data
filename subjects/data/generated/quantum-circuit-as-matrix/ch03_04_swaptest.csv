@@ -1,5 +1,0 @@
-;1;2;3;4;5
-q-input1-0;;cswap();;;
-q-input2-0;;cswap();;;
-q-output-0;h();cswap();h();x();measure()
-c-outputc-0;;;;;measure()

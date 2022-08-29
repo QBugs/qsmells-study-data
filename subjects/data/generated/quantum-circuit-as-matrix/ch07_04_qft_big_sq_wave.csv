@@ -1,9 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19
-q-signal-0;h();;barrier();;;;;;;;cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);h();swap()
-q-signal-1;h();;barrier();;;;;;;cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);h();cu1(float);swap();
-q-signal-2;h();;barrier();;;;;;cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);h();cu1(float);cu1(float);swap();;
-q-signal-3;h();;barrier();;;;;cu1(float);cu1(float);cu1(float);cu1(float);h();cu1(float);cu1(float);cu1(float);swap();;;
-q-signal-4;h();rz(float);barrier();;;;cu1(float);cu1(float);cu1(float);h();cu1(float);cu1(float);cu1(float);cu1(float);;swap();;;
-q-signal-5;h();;barrier();;;cu1(float);cu1(float);h();cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);;;;swap();;
-q-signal-6;h();;barrier();;cu1(float);h();cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);;;;;;swap();
-q-signal-7;h();;barrier();h();cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);cu1(float);;;;;;;;swap()

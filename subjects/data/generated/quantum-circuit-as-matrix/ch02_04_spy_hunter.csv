@@ -1,9 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23
-q-alice-0;reset();h();measure();reset();h();measure();reset();x();h();swap();barrier();;;;;;barrier();;;;;;
-q-fiber-0;;;;;;;;;;swap();barrier();h();measure();reset();x();h();barrier();;;;swap();;
-q-bob-0;;;;;;;;;;;barrier();;;;;;barrier();reset();h();measure();swap();h();measure()
-c-ahad-0;;;measure();;;;;;h();;;;;;;;;;;;;;
-c-aval-0;;;;;;measure();;x();;;;;;;;;;;;;;;
-c-fval-0;;;;;;;;;;;;;measure();;x();;;;;;;;
-c-bhad-0;;;;;;;;;;;;;;;;;;;;measure();;h();
-c-bval-0;;;;;;;;;;;;;;;;;;;;;;;measure()

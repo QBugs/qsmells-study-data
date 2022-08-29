@@ -1,1 +1,0 @@
-from ch07_06_qft_prepare_state import qc

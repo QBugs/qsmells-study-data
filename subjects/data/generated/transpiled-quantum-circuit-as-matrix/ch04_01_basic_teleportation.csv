@@ -1,7 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18
-q-alice-0;;;barrier();reset();u2(int,float);rz(float);u2(int,float);barrier();cx();u2(int,float);measure();barrier();;;;;;
-q-ep-0;u2(int,float);cx();barrier();;;;;barrier();cx();measure();;barrier();;;;;;
-q-bob-0;;cx();barrier();;;;;barrier();;;;barrier();x();u1(float);u2(int,float);rz(float);u2(int,float);measure()
-c-alicec-0;;;;;;;;;;;measure();;;u1(float);;;;
-c-epc-0;;;;;;;;;;measure();;;x();;;;;
-c-bobc-0;;;;;;;;;;;;;;;;;;measure()

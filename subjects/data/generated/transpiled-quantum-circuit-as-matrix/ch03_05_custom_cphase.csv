@@ -1,3 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11
-q-reg-0;u2(int,float);;cx();;cx();rz(float);barrier();;cx();;cx()
-q-reg-1;u2(int,float);rz(float);cx();rz(float);cx();;barrier();rz(ParameterExpression);cx();rz(ParameterExpression);cx()

@@ -1,1 +1,0 @@
-from ch06_01_grover_iterations import qc

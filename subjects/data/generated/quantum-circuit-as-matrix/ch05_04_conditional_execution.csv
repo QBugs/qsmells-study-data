@@ -1,8 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18
-q-a-0;x();;barrier();x();;cx();ccx();barrier();;;;;;barrier();ccx();cx();x();
-q-a-1;;;barrier();x();cx();cx();ccx();barrier();;;;;;barrier();ccx();cx();cx();x()
-q-a-2;h();;barrier();;cx();;ccx();barrier();ccx();;ccx();ccx();cx();barrier();ccx();;cx();
-q-b-0;x();;barrier();;;;;barrier();ccx();;ccx();ccx();cx();barrier();;;;
-q-b-1;h();rz(float);barrier();;;;;barrier();;ccx();;ccx();;barrier();;;;
-q-b-2;;;barrier();;;;;barrier();;ccx();;;;barrier();;;;
-q-scratch-0;;;barrier();;;;;barrier();ccx();ccx();ccx();;;barrier();;;;

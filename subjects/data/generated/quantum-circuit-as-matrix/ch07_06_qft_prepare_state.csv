@@ -1,5 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15
-q-signal-0;h();cx();cx();cx();cx();;barrier();swap();h();cu1(float);cu1(float);cu1(float);;;
-q-signal-1;;cx();x();;cx();x();barrier();swap();;cu1(float);h();cu1(float);cu1(float);;
-q-signal-2;;;cx();;;;barrier();swap();;;cu1(float);cu1(float);h();cu1(float);
-q-signal-3;;;;cx();;;barrier();swap();;;;cu1(float);cu1(float);cu1(float);h()

@@ -1,5 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31
-q-signal-0;u2(int,float);cx();cx();cx();cx();;barrier();cx();cx();cx();u2(int,float);cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);;;;;;;;
-q-signal-1;;cx();x();;cx();x();barrier();cx();cx();cx();u1(ParameterExpression);cx();;cx();u2(int,float);;;;;cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);cx();u1(ParameterExpression);;;;
-q-signal-2;;;cx();;;;barrier();cx();cx();cx();u1(ParameterExpression);;;;;cx();;cx();u1(ParameterExpression);cx();;cx();u2(int,float);;;;;cx();u1(ParameterExpression);cx();u1(ParameterExpression)
-q-signal-3;;;;cx();;;barrier();cx();cx();cx();u1(ParameterExpression);;;;;;;;;cx();;cx();u1(ParameterExpression);cx();;cx();u1(ParameterExpression);cx();;cx();u2(int,float)

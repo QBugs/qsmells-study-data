@@ -1,3 +1,0 @@
-;1;2;3;4;5;6;7;8
-q-reg-0;h();;cx();;cx();rz(float);barrier();crz(float)
-q-reg-1;h();rz(float);cx();rz(float);cx();;barrier();crz(float)

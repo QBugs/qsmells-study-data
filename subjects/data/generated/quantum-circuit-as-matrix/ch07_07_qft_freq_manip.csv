@@ -1,6 +1,0 @@
-;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35
-q-signal-0;;barrier();swap();h();cu1(float);cu1(float);cu1(float);;;;barrier();;;;cu1(float);cu1(float);cu1(float);h();swap();barrier();ccx();;ccx();ccx();cx();x();barrier();swap();h();cu1(float);cu1(float);cu1(float);;;
-q-signal-1;x();barrier();swap();;cu1(float);h();cu1(float);cu1(float);;;barrier();;;cu1(float);cu1(float);h();cu1(float);swap();;barrier();ccx();;ccx();ccx();cx();;barrier();swap();;cu1(float);h();cu1(float);cu1(float);;
-q-signal-2;;barrier();swap();;;cu1(float);cu1(float);h();cu1(float);;barrier();;cu1(float);h();cu1(float);cu1(float);;swap();;barrier();;ccx();;ccx();;;barrier();swap();;;cu1(float);cu1(float);h();cu1(float);
-q-signal-3;;barrier();swap();;;;cu1(float);cu1(float);cu1(float);h();barrier();h();cu1(float);cu1(float);cu1(float);;;;swap();barrier();;ccx();;;;;barrier();swap();;;;cu1(float);cu1(float);cu1(float);h()
-q-scratch-0;;barrier();;;;;;;;;barrier();;;;;;;;;barrier();ccx();ccx();ccx();;;;barrier();;;;;;;;
