@@ -1,2 +1,2 @@
-name,metric,value
-adapt_vqe,CLOC,8
+name,runtime,metric,value
+adapt_vqe,0,CLOC,8

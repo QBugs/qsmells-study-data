@@ -1,0 +1,13 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 42, 9)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 142, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 147, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 152, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 157, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 162, 2)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 179, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py', 180, 2)
+  metric  value
+0    PAR      9
+DONE!

@@ -1,0 +1,11 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 41, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 41, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 96, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 103, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 105, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 133, 2)
+  metric  value
+0    LEC      2
+DONE!

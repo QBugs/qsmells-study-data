@@ -1,2 +1,2 @@
-name,metric,value
-qaoa,CNOC,0
+name,runtime,metric,value
+qaoa,1,CNOC,0

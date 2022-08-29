@@ -1,2 +1,2 @@
-name,metric,value
-vqe,TNOL,1
+name,runtime,metric,value
+vqe,1,TNOL,1

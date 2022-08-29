@@ -1,0 +1,30 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 271, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 310, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 313, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 345, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 347, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 365, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 370, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 377, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 422, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 476, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 488, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 510, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 512, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 530, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 538, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 556, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 589, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 593, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 604, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 609, 3)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 633, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 634, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 635, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 636, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 693, 2)
+  metric  value
+0    LMC      3
+DONE!

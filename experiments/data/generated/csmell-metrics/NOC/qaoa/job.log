@@ -1,0 +1,5 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py
+  metric  value
+0    NOC      0
+DONE!

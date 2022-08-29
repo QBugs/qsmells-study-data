@@ -1,0 +1,14 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 110, 15)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 166, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 174, 5)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 184, 62)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 289, 4)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 303, 14)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 341, 4)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 347, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 356, 3)
+  metric  value
+0   MLOC     62
+DONE!

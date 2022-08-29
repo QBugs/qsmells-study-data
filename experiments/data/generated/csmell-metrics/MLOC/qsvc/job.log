@@ -1,0 +1,9 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 44, 13)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 75, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 80, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 87, 4)
+  metric  value
+0   MLOC     13
+DONE!

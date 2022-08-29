@@ -1,0 +1,7 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py
+(5, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 54, 29)
+(5, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 643, 6)
+  metric  value
+0   CLOC     29
+DONE!

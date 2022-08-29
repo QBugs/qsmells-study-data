@@ -1,0 +1,6 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/linear_solvers/hhl.py
+(9, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/linear_solvers/hhl.py', 440, 31, 1, 6)
+  metric  value
+0   LPAR      1
+DONE!

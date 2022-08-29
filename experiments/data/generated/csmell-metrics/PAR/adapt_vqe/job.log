@@ -1,0 +1,19 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 58, 6)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 107, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 112, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 119, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 123, 2)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 161, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 187, 2)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 367, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 373, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 378, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 383, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 388, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 393, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 398, 1)
+  metric  value
+0    PAR      6
+DONE!

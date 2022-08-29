@@ -1,0 +1,6 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 68, 49, 1)
+  metric  value
+0   TNOL      1
+DONE!

@@ -1,0 +1,12 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 38, 7)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 58, 20)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 112, 20)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 144, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 170, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 180, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 190, 3)
+  metric  value
+0   MLOC     20
+DONE!

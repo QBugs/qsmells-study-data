@@ -1,0 +1,18 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 82, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 89, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 117, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 126, 3)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 132, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 186, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 251, 3)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 451, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 451, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 451, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 452, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 452, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 452, 2)
+  metric  value
+0    LMC      3
+DONE!

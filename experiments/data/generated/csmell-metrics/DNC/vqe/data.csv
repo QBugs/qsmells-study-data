@@ -1,2 +1,2 @@
-name,metric,value
-vqe,DNC,2
+name,runtime,metric,value
+vqe,0,DNC,2

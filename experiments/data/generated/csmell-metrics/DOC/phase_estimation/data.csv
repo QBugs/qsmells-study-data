@@ -1,2 +1,2 @@
-name,metric,value
-phase_estimation,DOC,0
+name,runtime,metric,value
+phase_estimation,0,DOC,0

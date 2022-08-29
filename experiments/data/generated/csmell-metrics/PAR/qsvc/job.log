@@ -1,0 +1,9 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 44, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 75, 0)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 80, 1)
+(1, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/qsvc.py', 87, 1)
+  metric  value
+0    PAR      1
+DONE!

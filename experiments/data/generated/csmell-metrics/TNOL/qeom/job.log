@@ -1,0 +1,17 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 315, 36, 1)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 316, 36, 1)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 326, 36, 1)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 327, 36, 1)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 370, 95, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 375, 95, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 380, 95, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 385, 95, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 391, 89, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 396, 89, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 401, 89, 3)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/excited_states_solvers/qeom.py', 406, 89, 3)
+  metric  value
+0   TNOL      3
+DONE!

@@ -1,2 +1,2 @@
-name,metric,value
-qgan,DOC,0
+name,runtime,metric,value
+qgan,1,DOC,0

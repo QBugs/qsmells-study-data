@@ -1,0 +1,11 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 55, 7)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 129, 5)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 137, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 145, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 153, 3)
+(2, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/qaoa.py', 161, 3)
+  metric  value
+0   MLOC      7
+DONE!

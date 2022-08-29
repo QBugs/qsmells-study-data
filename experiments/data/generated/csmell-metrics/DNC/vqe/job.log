@@ -1,0 +1,12 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 132, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 288, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 293, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 488, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 569, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 683, 2, 1)
+(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/minimum_eigen_solvers/vqe.py', 713, 2, 1)
+  metric  value
+0    DNC      2
+DONE!

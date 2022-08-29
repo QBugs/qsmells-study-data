@@ -1,0 +1,7 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 85, 36, 1)
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/ipe.py', 139, 57, 1)
+  metric  value
+0   TNOL      1
+DONE!

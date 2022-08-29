@@ -1,0 +1,6 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/linear_solvers/hhl.py
+(10, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/linear_solvers/hhl.py', 142, 61, 1)
+  metric  value
+0   TNOC     61
+DONE!

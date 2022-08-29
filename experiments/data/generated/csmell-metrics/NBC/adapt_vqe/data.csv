@@ -1,2 +1,2 @@
-name,metric,value
-adapt_vqe,NBC,1
+name,runtime,metric,value
+adapt_vqe,1,NBC,1

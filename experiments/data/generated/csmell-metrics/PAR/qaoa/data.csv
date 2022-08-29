@@ -1,2 +1,2 @@
-name,metric,value
-qaoa,PAR,11
+name,runtime,metric,value
+qaoa,1,PAR,11

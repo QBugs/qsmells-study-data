@@ -1,0 +1,12 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 112, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 125, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 167, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 169, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 182, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 139, 2)
+(13, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/phase_estimators/phase_estimation.py', 201, 2)
+  metric  value
+0    LMC      2
+DONE!

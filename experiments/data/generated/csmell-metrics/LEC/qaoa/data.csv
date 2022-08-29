@@ -1,2 +1,2 @@
-name,metric,value
-qaoa,LEC,1
+name,runtime,metric,value
+qaoa,1,LEC,1

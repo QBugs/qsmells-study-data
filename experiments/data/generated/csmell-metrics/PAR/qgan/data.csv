@@ -1,2 +1,2 @@
-name,metric,value
-qgan,PAR,11
+name,runtime,metric,value
+qgan,1,PAR,11

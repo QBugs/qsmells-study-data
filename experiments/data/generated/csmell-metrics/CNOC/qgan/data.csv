@@ -1,2 +1,2 @@
-name,metric,value
-qgan,CNOC,32
+name,runtime,metric,value
+qgan,1,CNOC,32

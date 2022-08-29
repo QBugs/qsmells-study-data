@@ -1,0 +1,5 @@
+Python 3.7.8
+[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/classifiers/vqc.py
+  metric  value
+0   CNOO      0
+DONE!

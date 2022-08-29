@@ -1,2 +1,2 @@
-name,metric,value
-grover,NCT,0
+name,runtime,metric,value
+grover,0,NCT,0
