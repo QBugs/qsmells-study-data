@@ -2,8 +2,7 @@
 #
 # ------------------------------------------------------------------------------
 # This script downloads and sets up the following tools:
-#   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
-#     and [Virtualenv](https://virtualenv.pypa.io)
+#   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv) and [Virtualenv](https://virtualenv.pypa.io)
 #   - [PySmell](https://github.com/QBugs/PySmell)
 #   - [Qiskit](https://github.com/Qiskit)
 #   - [Cloc](https://github.com/AlDanial/cloc)
