@@ -5,7 +5,6 @@
 #   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
 #     and [Virtualenv](https://virtualenv.pypa.io)
 #   - [PySmell](https://github.com/QBugs/PySmell)
-#   - [O'Reilly Code samples for Programming Quantum Computers](https://github.com/oreilly-qc/oreilly-qc.github.io)
 #   - [Qiskit](https://github.com/Qiskit)
 #   - [Cloc](https://github.com/AlDanial/cloc)
 #   - [R](https://www.r-project.org)
@@ -188,22 +187,6 @@ popd > /dev/null 2>&1
 #
 # Subjects
 #
-
-OREILLY_QC_DIR="$SCRIPT_DIR/oreilly-qc.github.io"
-
-# Remove any previous file and directory
-rm -rf "$OREILLY_QC_DIR"
-
-git clone https://github.com/oreilly-qc/oreilly-qc.github.io.git "$OREILLY_QC_DIR"
-if [ "$?" -ne "0" ] || [ ! -d "$OREILLY_QC_DIR" ]; then
-  die "[ERROR] Clone of 'O'Reilly' programs!"
-fi
-
-pushd . > /dev/null 2>&1
-cd "$OREILLY_QC_DIR"
-  # Switch to lastest commit
-  git checkout 54a30ae14ce37e7db3cf6e550c8880fc5a2a2a2e || die "[ERROR] Commit '54a30ae14ce37e7db3cf6e550c8880fc5a2a2a2e' not found!"
-popd > /dev/null 2>&1
 
 # Switch to installed version
 pyenv local "3.7.8"                        || die "[ERROR] Failed to load Python v3.7.8!"
