@@ -1,0 +1,11 @@
+;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15
+q-q-0;u2(int,float);u3(ParameterExpression,ParameterExpression,ParameterExpression);u1(float);u1(float);barrier();;;;barrier();;;;;barrier();measure()
+q-q-1;u2(int,float);;;;barrier();u3(ParameterExpression,ParameterExpression,ParameterExpression);u1(float);u1(float);barrier();;;;;barrier();measure()
+q-q-2;u2(int,float);;;;barrier();;;;barrier();u2(int,float);u3(ParameterExpression,ParameterExpression,ParameterExpression);u1(float);u1(float);barrier();measure()
+c-c-0;;;;;;;;;;;;;;;
+c-c-1;;;;;;;;;;;;;;;
+c-c-2;;;;;;;;;;;;;;;
+c-c-3;;;;;;;;;;;;;;;
+c-meas-0;;;;;;;;;;;;;;;measure()
+c-meas-1;;;;;;;;;;;;;;;measure()
+c-meas-2;;;;;;;;;;;;;;;measure()

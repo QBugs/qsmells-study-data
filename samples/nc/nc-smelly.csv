@@ -1,0 +1,7 @@
+;1;2;3;4;5;6;7;8;9;10;11;12;13;14
+q-q-0;u2(int,float);cx();;;;barrier();rz(float);barrier();;;;cx();u2(int,float);measure()
+q-q-1;;cx();cx();;;barrier();rz(float);barrier();;;cx();cx();;
+q-q-2;;;cx();cx();;barrier();rz(float);barrier();;cx();cx();;;
+q-q-3;;;;cx();cx();barrier();rz(float);barrier();cx();cx();;;;
+q-q-4;;;;;cx();barrier();rz(float);barrier();cx();;;;;
+c-c-0;;;;;;;;;;;;;;measure()

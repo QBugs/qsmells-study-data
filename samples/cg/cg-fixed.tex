@@ -1,0 +1,13 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \qw & \qw & \qw & \ctrl{2} & \qw & \qw & \qw & \ctrl{2} & \ctrl{1} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \ctrl{1} & \qw & \qw\\
+	 	\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \qw & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \qw & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \qw & \qw\\
+	 	\nghost{{q}_{2} :  } & \lstick{{q}_{2} :  } & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{U_1}\,(\mathrm{\frac{\pi}{4}})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \qw & \qw & \qw\\
+\\ }}
+\end{document}

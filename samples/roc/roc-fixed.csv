@@ -1,0 +1,7 @@
+;1;2;3
+q-q-0;u2(int,float);measure();barrier()
+q-q-1;u2(int,float);measure();barrier()
+q-q-2;u2(int,float);measure();barrier()
+c-c-0;;measure();
+c-c-1;;measure();
+c-c-2;;measure();

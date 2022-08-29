@@ -1,0 +1,13 @@
+\documentclass[border=2px]{standalone}
+
+\usepackage[braket, qm]{qcircuit}
+\usepackage{graphicx}
+
+\begin{document}
+\scalebox{1.0}{{$\mathrm{global\,phase:\,} \mathrm{0.035649}$}
+\Qcircuit @C=1.0em @R=0.2em @!R { \\
+	 	\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \gate{\mathrm{U_3}\,(\mathrm{\frac{\pi}{4},\frac{-\pi}{2},0})} & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\frac{3\pi}{4},-\pi,\frac{-\pi}{2}})} & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\pi,-0.03565,-2.392})} & \ctrl{2} & \qw & \qw & \qw & \ctrl{2} & \gate{\mathrm{U_3}\,(\mathrm{\pi,0,0})} & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\frac{3\pi}{4},-\pi,\frac{-\pi}{2}})} & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\frac{\pi}{4},-\pi,-\pi})} & \ctrl{2} & \qw & \qw & \qw & \qw & \qw & \ctrl{2} & \gate{\mathrm{U_3}\,(\mathrm{0,-\pi,-\pi})} & \qw & \ctrl{2} & \qw & \ctrl{2} & \gate{\mathrm{U_3}\,(\mathrm{0,-\pi,-\pi})} & \qw & \qw & \qw & \qw\\
+	 	\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \gate{\mathrm{U_3}\,(\mathrm{\frac{\pi}{2},-\pi,0.7841})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{1.572,1.751e-06,-1.569})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{1.569,\frac{-3\pi}{4},\frac{\pi}{2}})} & \qw & \qw & \ctrl{1} & \qw & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{0.001323,\frac{-\pi}{2},-1.998e-14})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{1.572,1.751e-06,-1.569})} & \targ & \gate{\mathrm{U_3}\,(\mathrm{\frac{\pi}{2},3.14,-\pi})} & \qw & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\pi,\frac{-\pi}{4},\frac{\pi}{4}})} & \qw & \qw & \qw & \qw & \qw & \ctrl{1} & \qw & \qw & \ctrl{1} & \gate{\mathrm{U_3}\,(\mathrm{\pi,\frac{-\pi}{2},\frac{\pi}{2}})} & \qw & \qw\\
+	 	\nghost{{q}_{2} :  } & \lstick{{q}_{2} :  } & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{4}})} & \qw & \qw & \qw & \qw & \targ & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{4}})} & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \qw & \qw & \qw & \qw & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \targ & \gate{\mathrm{U_2}\,(\mathrm{0,\pi})} & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{2}})} & \targ & \targ & \targ & \gate{\mathrm{R_Z}\,(\mathrm{\frac{-\pi}{2}})} & \targ & \qw & \qw & \qw\\
+\\ }}
+\end{document}
