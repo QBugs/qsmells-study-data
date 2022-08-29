@@ -7,7 +7,7 @@
 #
 # Usage:
 # run-qsmell.sh
-#   --input_file_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix/ch02_01_random_bit.csv or ../../tools/oreilly-qc.github/samples/Qiskit/ch02_01_random_bit.py>
+#   --input_file_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix/grover.csv or ../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py>
 #   --smell_metric <str, name of the smell metric to compute: CG, ROC, NC, LC, IM, IdQ, IQ, AQ, LPQ>
 #   --output_file_path <path>
 #   [help]
@@ -18,7 +18,7 @@ source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} --input_file_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix/ch02_01_random_bit.csv or ../../tools/oreilly-qc.github/samples/Qiskit/ch02_01_random_bit.py> --smell_metric <str, name of the smell metric to compute: CG, ROC, NC, LC, IM, IdQ, IQ, AQ, LPQ> --output_file_path <path> [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} --input_file_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix/grover.csv or ../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py> --smell_metric <str, name of the smell metric to compute: CG, ROC, NC, LC, IM, IdQ, IQ, AQ, LPQ> --output_file_path <path> [help]"
 if [ "$#" -ne "1" ] && [ "$#" -ne "6" ]; then
   die "$USAGE"
 fi
@@ -48,7 +48,7 @@ while [[ "$1" = --* ]]; do
 done
 
 # Check whether all arguments have been initialized
-[ "$INPUT_FILE_PATH" != "" ] || die "[ERROR] Missing --input_file_path argument!"
+[ "$INPUT_FILE_PATH" != "" ]  || die "[ERROR] Missing --input_file_path argument!"
 [ "$SMELL_METRIC" != "" ]     || die "[ERROR] Missing --smell_metric argument!"
 [ "$OUTPUT_FILE_PATH" != "" ] || die "[ERROR] Missing --output_file_path argument!"
 # Check whether input files exit and it is not empty

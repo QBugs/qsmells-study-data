@@ -6,7 +6,7 @@
 #
 # Usage:
 # run-pysmell.sh
-#   --input_file_path <path, e.g., ../../tools/oreilly-qc.github.io/samples/Qiskit/ch02_01_random_bit.py>
+#   --input_file_path <path, e.g., ../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py>
 #   --smell_metric <str, name of the smell metric to compute: PAR, MLOC, DOC, NBC, CLOC, NOC, LPAR, NOO, TNOC, TNOL, CNOC, NOFF, CNOO, LMC, LEC, DNC, NCT>
 #   --output_file_path <path>
 #   [help]
@@ -17,7 +17,7 @@ source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} --input_file_path <path, e.g., ../../tools/oreilly-qc.github.io/samples/Qiskit/ch02_01_random_bit.py> --smell_metric <str, name of the smell metric to compute: PAR, MLOC, DOC, NBC, CLOC, NOC, LPAR, NOO, TNOC, TNOL, CNOC, NOFF, CNOO, LMC, LEC, DNC, NCT> --output_file_path <path, e.g., ../data/generated/csmell-metrics/ch02_01_random_bit.csv> [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} --input_file_path <path, e.g., ../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py> --smell_metric <str, name of the smell metric to compute: PAR, MLOC, DOC, NBC, CLOC, NOC, LPAR, NOO, TNOC, TNOL, CNOC, NOFF, CNOO, LMC, LEC, DNC, NCT> --output_file_path <path> [help]"
 if [ "$#" -ne "1" ] && [ "$#" -ne "6" ]; then
   die "$USAGE"
 fi
