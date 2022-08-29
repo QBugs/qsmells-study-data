@@ -23,5 +23,5 @@ fig.savefig('lpq-fixed-virtual-circuit.pdf')
 fig = plot_circuit_layout(qc, backend, view='physical')
 fig.savefig('lpq-fixed-physical-circuit.pdf')
 
-from quantum_circuit_to_binary_matrix import Justify, qc2matrix
+from quantum_circuit_to_matrix import Justify, qc2matrix
 qc2matrix(qc, Justify.left, 'lpq-fixed.csv')

@@ -38,5 +38,5 @@ qc.draw(output='latex_source', filename='idq-smelly.tex', justify='left')
 qc.draw(output='mpl', filename='idq-smelly.pdf', justify='left', fold=-1)
 qc.draw(output='mpl', filename='idq-smelly-folded.pdf', justify='left')
 
-from quantum_circuit_to_binary_matrix import Justify, qc2matrix
+from quantum_circuit_to_matrix import Justify, qc2matrix
 qc2matrix(qc, Justify.left, 'idq-smelly.csv')

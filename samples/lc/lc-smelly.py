@@ -23,5 +23,5 @@ qc.draw(output='latex_source', filename='lc-smelly.tex', justify='left')
 qc.draw(output='mpl', filename='lc-smelly.pdf', justify='left', fold=-1)
 qc.draw(output='mpl', filename='lc-smelly-folded.pdf', justify='left')
 
-from quantum_circuit_to_binary_matrix import Justify, qc2matrix
+from quantum_circuit_to_matrix import Justify, qc2matrix
 qc2matrix(qc, Justify.left, 'lc-smelly.csv')

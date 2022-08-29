@@ -7,7 +7,7 @@
 # and each cell represents a quantum operation performed in circuit.
 #
 # Usage example:
-#    from quantum_circuit_to_binary_matrix import Justify, qc2matrix
+#    from quantum_circuit_to_matrix import Justify, qc2matrix
 #
 #    from qiskit import QuantumCircuit, QuantumRegister
 #    reg = QuantumRegister(3, name='reg')
@@ -34,7 +34,7 @@
 # q-reg-2;;;;;;;x();x()
 #
 # Or using its command line version as:
-#    python quantum_circuit_to_binary_matrix.py
+#    python quantum_circuit_to_matrix.py
 #        --module-name <str, e.g., wrapper_ch04_02_teleport_fly>
 #        [--justify <str, i.e., "left" or "none">]
 #        [--transpile <bool, transpile the circuit, if enable>]

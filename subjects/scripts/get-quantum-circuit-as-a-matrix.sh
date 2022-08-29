@@ -71,12 +71,12 @@ OUTPUT_FILE_PATH="$OUTPUT_DIR_PATH/$(echo $WRAPPER_NAME | sed 's|^wrapper_||').c
 echo "[DEBUG] Going to process $WRAPPER_NAME (in $WRAPPER_FILE_PATH) and save it to $OUTPUT_FILE_PATH"
 
 if [ "$TRANSPILE" == "" ]; then
-  python "$SCRIPT_DIR/../../utils/scripts/quantum_circuit_to_binary_matrix.py" \
+  python "$SCRIPT_DIR/../../utils/scripts/quantum_circuit_to_matrix.py" \
     --module-name "$WRAPPER_NAME" \
     --justify "left" \
     --output-file "$OUTPUT_FILE_PATH" || die "[ERROR] Failed to execute $WRAPPER_FILE_PATH!"
 else
-  python "$SCRIPT_DIR/../../utils/scripts/quantum_circuit_to_binary_matrix.py" \
+  python "$SCRIPT_DIR/../../utils/scripts/quantum_circuit_to_matrix.py" \
     --module-name "$WRAPPER_NAME" \
     --justify "left" \
     --transpile-circuit \

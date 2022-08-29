@@ -15,7 +15,7 @@ qc.unitary([
 # ------------------------------------------------------------------------------
 
 from qiskit import transpile
-from quantum_circuit_to_binary_matrix import Justify, qc2matrix
+from quantum_circuit_to_matrix import Justify, qc2matrix
 
 # Transpile
 a = transpile(qc, basis_gates=['u1', 'u2', 'u3', 'rz', 'sx', 'x', 'cx', 'id', 'unitary'], optimization_level=0)
