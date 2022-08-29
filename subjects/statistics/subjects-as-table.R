@@ -74,6 +74,12 @@ for (origin in sort(unique(df$'origin'))) {
   }
 
   cat('\\midrule\n', sep='')
+  cat('\\textit{Median}', sep='')
+  cat(' & ', sprintf('%.2f', round(median(df$'lines_of_code'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(median(df$'num_qubits'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(median(df$'num_clbits'[origin_mask]), 2)), sep='')
+  cat(' & ', sprintf('%.2f', round(median(df$'num_ops'[origin_mask]), 2)), sep='')
+  cat(' \\\\\n', sep='')
   cat('\\textit{Average}', sep='')
   cat(' & ', sprintf('%.2f', round(mean(df$'lines_of_code'[origin_mask]), 2)), sep='')
   cat(' & ', sprintf('%.2f', round(mean(df$'num_qubits'[origin_mask]), 2)), sep='')
