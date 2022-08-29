@@ -67,6 +67,13 @@ while read -r row; do
   [ -s "$python_file_path" ] || die "[ERROR] $python_file_path does not exist or it is empty!"
 
   for smell_metric in "PAR" "MLOC" "DOC" "NBC" "CLOC" "NOC" "LPAR" "NOO" "TNOC" "TNOL" "CNOC" "NOFF" "CNOO" "LMC" "LEC" "DNC" "NCT"; do
+    job_log_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/job.log"
+    if [ -f "$job_log_file_path" ]; then
+      if tail -n1 "$job_log_file_path" | grep -q "^DONE\!$"; then
+        # Avoid re-computing already computed data
+        continue
+      fi
+    fi
     output_file_path="$OUTPUT_DIR_PATH/$smell_metric/$name/data.csv"
     output_dir_path=$(echo "$output_file_path" | rev | cut -f2- -d'/' | rev)
     rm -rf "$output_dir_path"; mkdir -p "$output_dir_path"
@@ -74,7 +81,7 @@ while read -r row; do
     bash "$SCRIPT_DIR/run-pysmell.sh" \
       --input_file_path "$python_file_path" \
       --smell_metric "$smell_metric" \
-      --output_file_path "$output_file_path" || die "[ERROR] Failed to execute run-pysmell.sh on $python_file_path!"
+      --output_file_path "$output_file_path" > "$job_log_file_path" 2>&1 || die "[ERROR] Failed to execute run-pysmell.sh on $python_file_path!"
   done
 done < <(tail -n +2 "$SUBJECTS_FILE_PATH")
 
