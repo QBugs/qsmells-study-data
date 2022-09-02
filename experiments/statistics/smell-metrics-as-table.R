@@ -21,39 +21,27 @@ if (length(args) != 2) {
 INPUT_FILE  <- args[1]
 OUTPUT_FILE <- args[2]
 
-GATES_ERROR <- 0.03512
-
 # ------------------------------------------------------------------------- Main
 
-# Load subject's data
-subjects          <- load_CSV('../../subjects/data/subjects.csv') # origin,name,path
-subjects$'module' <- sapply(subjects$'path', FUN = function(x) unlist(strsplit(x, '/'))[1])
-# Load smell metrics data
-metrics_data      <- load_CSV(INPUT_FILE) # name,metric,value
-if ('LC' %in% metrics_data$'metric') {
-  metrics_data$'value'[metrics_data$'metric' == 'LC'] <- (1 - 0.03512)^(metrics_data$'value'[metrics_data$'metric' == 'LC'])
-}
-metrics_data$'value' <- as.numeric(metrics_data$'value')
-# Order set of metrics
-metrics           <- sort(unique(metrics_data$'metric')) # FIXME we might want a custom sort to match the order in the paper
+# Load QSmell's data
+tool_data  <- augment_smell_metrics_data(INPUT_FILE)
+# Discard the subjects used in the peer-agreement to evaluated QSmell effectiveness
+tool_data <- tool_data[tool_data$'name' %!in% c('qsvc', 'fae'), ] # FIXME automatically get this data from ../data/peer-evaluation-of-qsmell.csv
 
-df <- merge(subjects, metrics_data, by=c('name'), all=TRUE)
+# Compute smells' thresholds
+thresholds <- compute_thresholds(tool_data)
+print(thresholds) # debug
+
+# Label programs as smelly, given the computed thresholds
+df <- label_smelly_programs(tool_data, thresholds)
 # Fix name for latex
 df$'name' <- gsub('_', '\\\\_', df$'name')
-df$'name'[df$'origin' != 'oreilly-qc'] <- paste0('(', df$'module'[df$'origin' != 'oreilly-qc'], ') ', df$'name'[df$'origin' != 'oreilly-qc'])
-print(df) # debug
-print(summary(df)) # debug
 
-# Compute thresholds
-thresholds <- data.frame(origin = as.character(), metric = as.character(), value = as.numeric())
-for (origin in sort(unique(df$'origin'))) {
-  for (metric in metrics) {
-    thresholds[nrow(thresholds)+1, ] <- c(origin, metric, median(df$'value'[df$'origin' == origin & df$'metric' == metric]))
-  }
-}
-thresholds$'value' <- as.numeric(thresholds$'value')
-print(thresholds) # debug
-print(summary(thresholds)) # debug
+# Debug
+print(df)
+print(summary(df))
+
+metrics <- levels(df$'metric')
 
 # Set and init tex file
 unlink(OUTPUT_FILE)
@@ -82,41 +70,53 @@ for (origin in sort(unique(df$'origin'))) {
   origin_mask <- df$'origin' == origin
 
   cat('\\midrule\n', sep='')
-  cat('\\rowcolor{gray!25}\n', sep='')
-  cat('\\multicolumn{', length(metrics)+1, '}{c}{\\textbf{\\textit{', pretty_print_origin(origin), '}}} \\\\\n', sep='')
+  if (length(unique(df$'origin')) > 1) {
+    cat('\\rowcolor{gray!25}\n', sep='')
+    cat('\\multicolumn{', length(metrics)+1, '}{c}{\\textbf{\\textit{', pretty_print_origin(origin), '}}} \\\\\n', sep='')
+  }
 
-  for (name in sort(unique(df$'name'[origin_mask]))) {
-    name_mask <- df$'name' == name
-    cat(name, sep='')
+  for (module in sort(unique(df$'module'[origin_mask]))) {
+    module_mask <- df$'module' == module
 
-    for (metric in metrics) {
-      metric_mask  <- df$'metric' == metric
-      metric_value <- df$'value'[origin_mask & name_mask & metric_mask]
-
-      # Is value above the threshold?
-      threshold_value <- thresholds$'value'[thresholds$'origin' == origin & thresholds$'metric' == metric]
-      cellcolor <- ifelse(metric_value == 0 && threshold_value == 0, '',
-                     ifelse(metric_value > threshold_value, '\\cellcolor{gray!25}', '')
-                   )
-
-      if (metric == 'LC') {
-        cat(' & ', cellcolor, sprintf('%.2f', round(metric_value, 2)), sep='')
-      } else {
-        cat(' & ', cellcolor, metric_value, sep='')
-      }
+    if (origin == 'oreilly-qc') {
+      module <- ''
+    } else {
+      module <- paste0('(', module, ') ')
     }
-    cat(' \\\\\n', sep='')
+
+    for (name in sort(unique(df$'name'[origin_mask & module_mask]))) {
+      name_mask <- df$'name' == name
+      cat(module, '', name, sep='')
+
+      for (metric in metrics) {
+        metric_mask  <- df$'metric' == metric
+        metric_value <- df$'value'[origin_mask & module_mask & name_mask & metric_mask]
+
+        is_smelly    <- df$'smelly'[origin_mask & module_mask & name_mask & metric_mask]
+        cellcolor    <- ifelse(is_smelly, '\\cellcolor{gray!25}', '')
+
+        if (metric == 'LC') {
+          cat(' & ', cellcolor, sprintf('%.2f', round(metric_value, 2)), sep='')
+        } else {
+          cat(' & ', cellcolor, metric_value, sep='')
+        }
+      }
+      cat(' \\\\\n', sep='')
+    }
   }
 
   cat('\\midrule\n', sep='')
   body_bottom('Median', metrics, df[origin_mask, ], median)
   body_bottom('Average', metrics, df[origin_mask, ], mean)
+  body_bottom('Threshold', metrics, thresholds[thresholds$'origin' == origin, ], mean)
 }
 
-cat('\\midrule\n', sep='')
-cat('\\midrule\n', sep='')
-body_bottom('Overall Median', metrics, df, median)
-body_bottom('Overall Average', metrics, df, mean)
+if (length(unique(df$'origin')) > 1) {
+  cat('\\midrule\n', sep='')
+  cat('\\midrule\n', sep='')
+  body_bottom('Overall Median', metrics, df, median)
+  body_bottom('Overall Average', metrics, df, mean)
+}
 
 # Table's footer
 cat('\\bottomrule', '\n', sep='')
