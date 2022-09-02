@@ -1,0 +1,115 @@
+Q1,Q2,Q3,Q3_5_TEXT,Q4,Q5,Q6,Q6_10_TEXT,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16_1,Q16_2,Q16_3,Q16_4,Q16_5,Q16_6,Q16_7,Q16_8,Q17
+"Welcome! We are a team of Software Engineering researchers at University of California, Irvine, investigating programming practices in Quantum Programming. Your input will help us understand practitioners' perceptions on a set of previously identified bad programming practices in quantum computing. This survey consists of 16 questions (5 background questions and 11 quantum-related questions) that should take approximately 15 minutes to complete. The results of this survey will be used in a scientific publication. 
+
+By clicking the button below, you acknowledge that your participation in the study is voluntary, you are at least 18 years of age, and that you are aware that you may choose to terminate your participation in the study at any time and for any reason. Please contact Iftekhar Ahmed (iftekha@uci.edu) if you have any questions or concerns.
+
+
+
+Would you like to continue to finish this survey?",How long have you been programming?,Please select from the following list the classical programming languages that you are comfortable programming with: - Selected Choice,Please select from the following list the classical programming languages that you are comfortable programming with: - Other - Text,What is your level of knowledge in quantum physics?,How many years have you been coding using Quantum Programming Languages?,Please select from the following list the quantum programming languages / frameworks the ones that you have been using or a familiar with: - Selected Choice,Please select from the following list the quantum programming languages / frameworks the ones that you have been using or a familiar with: - Other - Text,"Usage of Customized Gates (CG):  Although quantum frameworks (e.g., Qiskit) allow one to define customized gates, it is recommended to use the ones built-in those frameworks. Customized gates, when decomposable into built-in operators, do often require a higher number of operators in comparison to equivalent solutions made exclusively of built-in operators. Furthermore, the built-in operators are already optimized thus reducing the probability of circuit errors. Therefore, the usage of customized gates should be used only when it is absolutely necessary.
+
+ 
+
+According to this description, do you agree the Usage of Customized Gates (CG) is a bad practice?","Repeated set of Operations on Circuit (ROC):  Due to current technological and physical limitations, the number of operations one can pass to a quantum computer is limited. Thus, the circuit implementing the entire algorithm/program should be prepared in a way that the number of sequential repeated sets of operations to be performed should be the least possible.
+
+ 
+
+
+
+ 
+According to you, is the quantum circuit above affected by the Repeated set of Operations on Circuit (ROC) bad practice?
+
+
+
+Note: the draw of the circuit above is splitted in three to ease one to read it without having to do any horizontal scroll.","Non-parameterized circuit (NC):  Real quantum devices work in a shared environment where each request (e.g., the execution of a quantum circuit) is queued. To reduce payloads of communication and delays of running the quantum circuit several times due to queuing, one should try to idealize the entire circuit with focus on reducing the number of communications with the real quantum devices by using, for example, parameterized circuits. In Qiskit, for example, this can be achieved by using the bind_parameters method in a QuantumCircuit object.
+
+
+
+According to you, is the source code above affected by the Non-parameterized Circuit (NC) bad practice?","Long Circuit (LC):  Unitary gates and measurements are prone to errors (specially due to quantum noise). The higher the depth of the circuit and/or wider the circuit, the higher is the probability of affecting a quantum circuit's intended behavior.
+
+
+
+According to you, is the quantum circuit shown above affected by the Long Circuit (LC) bad practice?","Intermediate Measurements (IM):  Intermediate measurements occur when a quantum state is measured within a quantum circuit and right after the measurement, there are still quantum operators to be performed on the circuit. As the measurement is an operation that collapses the quantum state into a classical state, intermediate measurements may provoke possible circuit errors. Therefore, measurements should be postponed to be the very last operation on the circuit to avoid error propagation. 
+
+
+
+According to you, is the quantum circuit above affected by the Intermediate Measurements (IM) bad practice?","Idle Qubits (IdQ):  With current quantum technology it is only possible to ensure the correctness of a state for very short periods of time. Thus, having idle qubits for too long enhance the loss of quantum information that may jeopardize the results of a quantum circuit.
+
+
+According to you, is the quantum circuit above affected by the Idle Qubits (IdQ) bad practice?
+
+ 
+
+Note: the draw of the circuit above is split into three to ease one to read it without having to do any horizontal scroll.","Initialization of qubit differently from |0〉(IQ):    Initializing qubits in a state different from |0⟩ implies putting the qubit in an excited state, i.e., in a state of non-equilibrium. A qubit in an excited state has a high chance of being altered throughout time, due to its physical properties, if it is not used for a while and therefore, the qubit’s state might not be the one we want it to be when we apply an operator to it after a given time.
+
+
+According to you, is the quantum circuit above affected by the Initialization of Qubit differently from |0〉 (IQ) bad practice?
+
+ 
+
+Note: the draw of the circuit above is split into two to ease one to read it without having to do any horizontal scroll.","No-alignment between the Logical and Physical Qubits (LPQ): The topology of a quantum circuit impacts its behavior, i.e., the results obtained from the circuit can change according to the physical qubits configuration. Therefore, not aligning the logical qubits to the proper physical qubits may result in the occurrence of noise. In Qiskit, for example, this can be achieved by invoking the transpile method with the parameter initial_layout set.
+
+
+
+According to this description, do you agree the No-alignment between the Logical and Physical Qubits (LPQ) is a bad practice?","If you believe there are other impacts or want to add any comment regarding the bad practices mentioned above, please briefly describe:","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Usage of Customized Gates (CG)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Repeated set of Operations on Circuit (ROC)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Non-parameterized Circuit (NC)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Long Circuit (LC)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Intermediate Measurements (IM)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Idle Qubits (IdQ)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">Initialization of qubit differently from |0〉(IQ)</span></span>","Based on your experience, please rank the above bad programming practices according to their severity. 1 is the most severe and 8 is the least severe. Multiple bad programming practices can have the same ranking. - <span style=""font-size:16px;""><span style=""font-family:Times New Roman,Times,serif;"">No-alignment between the logical and physical qubits (LPQ)</span></span>","If you would like to be contacted for follow-ups to this study or know more about the outcome of this study, please provide your email address:"
+I consent,1 year or more but less than 2 years,C/C++,,2,Less than 1 year,,,No,Yes,,,,,,,,,,,,,,,,
+I consent,5 years or more but less than 10 years,"Python
+,C/C++",,5 (expert),1 year or more but less than 2 years,"Qiskit,Other",Tequila,No,Yes,,,No,No,Yes,Yes,,8,5,6,3,8,3,3,4,
+I consent,10 years or more but less than 15 years,"Python
+,Java,C/C++,Other","Bash, Ada",4,2 years or more but less than 5 years,"OpenQASM,Qiskit,Other",myQLM,No,No,Yes,No,Yes,Yes,Yes,No,"About usage of custom gates: Using native gates directly makes the quantum circuit non hardware-agnostic. My opinion on this is ""use whatever you need, the transpiler will take care to adapt for the hardware"". If the transpiler is bad, this is another problem that should be solved. About the ROC question: nothing seems repeated (is it an inverse QFT?), but the SWAP gates at the beginning are useless which makes the question ambiguous in my opinion. About Long Circuit: I feel like you are expecting a ""yes this circuit is too long"" answer, but this depends on 1) gate timings and 2) decoherence times which are not provided. Also, all these rotations can be simplified to maximum 3 Rz rotations and 2 sqrt(X) gates, which make the circuit super-short. About Intermediate-Measurement: it is not a bad practice... If your algorithm requires it, use it. Else, do not use it. Saying that is just like saying ""using controlled-NOT gates are a bad practice because they are errorneous"": no! Try to limit their number, but if you need a controlled-NOT, you use a controlled-NOT, this is the algorithm, not your choice. Finally, aligning the physical and logical qubit topologies is a good idea... when it is possible! For most quantum circuits, this is not possible. Again, ideally, this should be the work of the transpiler and this should not be hard-coded in the quantum circuit.",8,5,2,2,8,4,4,3,
+I consent,2 years or more but less than 5 years,"Python
+",,5 (expert),2 years or more but less than 5 years,"Cirq,Qiskit",,No,Yes,No,Yes,,Yes,No,No,,5,1,2,3,7,2,8,6,
+I consent,1 year or more but less than 2 years,"Python
+",,1 (novice),Less than 1 year,OpenQASM,,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,,5,3,2,8,4,6,1,7,
+I consent,2 years or more but less than 5 years,"Python
+",,4,1 year or more but less than 2 years,OpenQASM,,No,Yes,No,No,No,Yes,Yes,No,,2,5,2,3,2,5,5,4,
+I consent,2 years or more but less than 5 years,"Python
+",,4,2 years or more but less than 5 years,Qiskit,,No,No,Yes,Yes,No,No,No,No,Some of these aren't bad practices if you have good reason to do so (for example done experiments require measuring mid-circuit etc.) Also Qiskit automatically optimize long unitary single qubit gates so it's not a big problem,8,8,2,3,8,8,8,1,
+I consent,Over 20 years,"Python
+,C/C++",,2,1 year or more but less than 2 years,Qiskit,,Yes,Yes,,Yes,Yes,Yes,,Yes,,6,4,5,4,3,3,4,3,
+I consent,5 years or more but less than 10 years,"Python
+,C/C++",,5 (expert),2 years or more but less than 5 years,Other,"Tequila, Qulacs",No,No,Yes,Yes,No,Yes,Yes,Yes,,8,1,7,2,6,4,5,3,
+I consent,5 years or more but less than 10 years,"Python
+,Java,C/C++,Other",Javascript,4,2 years or more but less than 5 years,"Cirq,OpenQASM,Q#,Strawberry Fields,Qiskit",,No,Yes,Yes,Yes,No,Yes,,Yes,,8,4,7,1,6,3,5,2,
+I consent,5 years or more but less than 10 years,"Python
+,C/C++,C#,Other",,2,2 years or more but less than 5 years,"OpenQASM,Qiskit",,No,,No,Yes,No,Yes,,Yes,,8,5,7,1,4,3,6,2,
+I consent,5 years or more but less than 10 years,"Python
+,Other",,5 (expert),2 years or more but less than 5 years,"Cirq,Strawberry Fields,Qiskit",,No,No,Yes,Yes,Yes,Yes,Yes,Yes,"This all really depends on the research goal - using customized gates may be the only possible route for some applications, but if you have a better construction, that should be used, of course. If you plan on only using simulators, then many of the LPQ issues are irrelevant. Simple things like ROC are the most 'serious' just because they are potentially the easiest to resolve (i.e. multiple one qubit rotations in a row), alongside NC.",6,2,1,4,4,5,1,4,
+I consent,5 years or more but less than 10 years,"Python
+,C/C++",,4,2 years or more but less than 5 years,"OpenQASM,Qiskit",,No,No,No,No,No,Yes,No,Yes,,2,3,2,1,2,3,4,5,
+I consent,2 years or more but less than 5 years,"Python
+",,4,Less than 1 year,"Qiskit,Other",PennyLane,Yes,Yes,No,Yes,,Yes,No,No,,5,1,2,3,7,2,8,6,
+I consent,1 year or more but less than 2 years,"Python
+",,2,1 year or more but less than 2 years,"OpenQASM,Qiskit,Other",pennylane,No,Yes,Yes,Yes,No,Yes,,Yes,,8,4,7,1,6,3,5,2,
+I consent,15 years or more but less than 20 years,"Python
+,Other",FORTRAN,4,1 year or more but less than 2 years,"OpenQASM,Qiskit",,Yes,No,Yes,Yes,No,Yes,Yes,Yes,,8,1,7,2,6,4,5,3,
+I consent,,,,,,,,,,Yes,Yes,Yes,Yes,,Yes,,8,4,7,1,6,3,5,2,
+I consent,10 years or more but less than 15 years,Java,,3,1 year or more but less than 2 years,Cirq,,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,,2,5,2,3,2,5,5,4,
+I consent,,,,,,,,,,Yes,Yes,Yes,Yes,Yes,Yes,,8,5,6,3,8,3,3,4,
+I consent,5 years or more but less than 10 years,"Python
+,Java,C#,Other",MATLAB,3,Never,Other,None of the above,No,,Yes,Yes,Yes,Yes,Yes,Yes,,2,1,3,2,2,2,2,1,
+I consent,5 years or more but less than 10 years,"Python
+,Other",Mathematica,4,Less than 1 year,Qiskit,,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,,5,3,2,8,4,6,1,7,
+I consent,5 years or more but less than 10 years,"Python
+,C/C++",,3,Less than 1 year,Qiskit,,,,No,No,No,Yes,Yes,No,,2,5,2,3,2,5,5,4,
+I consent,Over 20 years,"Python
+,C/C++,C#",,5 (expert),5 years or more,Q#,,Yes,Yes,Yes,Yes,No,No,No,No,,8,8,2,3,8,8,8,1,
+I consent,2 years or more but less than 5 years,"Python
+",,2,Less than 1 year,Qiskit,,,,Yes,Yes,Yes,Yes,,Yes,,6,4,5,4,3,3,4,3,
+I consent,15 years or more but less than 20 years,"Python
+,C/C++,C#",,5 (expert),5 years or more,Q#,,No,No,No,Yes,No,Yes,,Yes,,8,5,7,1,4,3,6,2,
+I consent,10 years or more but less than 15 years,"Python
+,C/C++",,5 (expert),Less than 1 year,"OpenQASM,Qiskit",,,,Yes,Yes,No,Yes,,Yes,,8,4,7,1,6,3,5,2,
+I consent,Over 20 years,"Java,C#",,5 (expert),Never,Cirq,,,,,,,,,,,2,5,2,3,2,5,5,4,
+I consent,2 years or more but less than 5 years,"Python
+",,2,Less than 1 year,Qiskit,,Yes,,Yes,Yes,No,Yes,Yes,Yes,,8,1,7,2,6,4,5,3,
+I consent,2 years or more but less than 5 years,"Python
+,Other",R,3,Never,Other,None,,,Yes,Yes,No,Yes,Yes,Yes,,8,1,7,2,6,4,5,3,
+I consent,15 years or more but less than 20 years,C#,,5 (expert),5 years or more,qGCL,,No,Yes,Yes,Yes,No,Yes,,Yes,,8,5,6,3,8,3,3,4,
+I consent,2 years or more but less than 5 years,Other,,3,Less than 1 year,Qiskit,,Yes,,No,Yes,No,Yes,,Yes,,8,5,7,1,4,3,6,2,
+I consent,2 years or more but less than 5 years,"Python
+,C/C++",,4,Never,Other,,,,Yes,Yes,Yes,Yes,Yes,Yes,,6,2,1,4,4,5,1,4,
+I consent,5 years or more but less than 10 years,Java,,1 (novice),Never,Other,,,,Yes,Yes,No,No,No,No,,2,1,3,2,2,2,2,1,
+I consent,2 years or more but less than 5 years,"Python
+,Java,C/C++",,2,Less than 1 year,"Strawberry Fields,Qiskit",,,,No,No,No,Yes,No,Yes,,2,3,2,1,2,3,4,5,
+I consent,5 years or more but less than 10 years,"Python
+,Java,C/C++",,1 (novice),2 years or more but less than 5 years,"OpenQASM,Qiskit,Other",Pennylane,Yes,No,No,No,No,Yes,No,Yes,,2,3,2,1,2,3,4,5,
