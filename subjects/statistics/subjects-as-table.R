@@ -44,8 +44,10 @@ for (origin in sort(unique(df$'origin'))) {
   origin_mask <- df$'origin' == origin
 
   cat('\\midrule\n', sep='')
-  cat('\\rowcolor{gray!25}\n', sep='')
-  cat('\\multicolumn{5}{c}{\\textbf{\\textit{', pretty_print_origin(origin), '}}} \\\\\n', sep='')
+  if (length(unique(df$'origin')) > 1) {
+    cat('\\rowcolor{gray!25}\n', sep='')
+    cat('\\multicolumn{5}{c}{\\textbf{\\textit{', pretty_print_origin(origin), '}}} \\\\\n', sep='')
+  }
 
   for (module in sort(unique(df$'module'[origin_mask]))) {
     module_mask <- df$'module' == module
