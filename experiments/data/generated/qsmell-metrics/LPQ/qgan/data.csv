@@ -1,2 +1,2 @@
-name,metric,value
-qgan,LPQ,0
+name,runtime,metric,value
+qgan,0,LPQ,0

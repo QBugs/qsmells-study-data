@@ -1,2 +1,2 @@
-name,metric,value
-vqe,NC,0
+name,runtime,metric,value
+vqe,1,NC,0

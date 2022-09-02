@@ -1,0 +1,8 @@
+Python 3.7.8
+i 0 :: slice_size 5
+  slice ['u2(int,float)', 'u2(int,float)', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'cx()', 'cx()', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'cx()', 'cx()'] == next_slice ['u2(int,float)', 'u2(int,float)', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'cx()', 'cx()', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', 'cx()', 'cx()']
+i 9 :: slice_size 2
+  slice ['cx()', 'cx()', 'u3(ParameterVectorElement,ParameterExpression,ParameterExpression)', 'u3(ParameterVectorElement,ParameterExpression,ParameterExpression)'] == next_slice ['cx()', 'cx()', 'u3(ParameterVectorElement,ParameterExpression,ParameterExpression)', 'u3(ParameterVectorElement,ParameterExpression,ParameterExpression)']
+  metric  value
+0    ROC      2
+DONE!

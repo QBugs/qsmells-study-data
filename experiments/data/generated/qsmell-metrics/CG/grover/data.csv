@@ -1,2 +1,2 @@
-name,metric,value
-grover,CG,0
+name,runtime,metric,value
+grover,0,CG,0

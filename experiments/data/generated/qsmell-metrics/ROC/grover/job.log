@@ -1,0 +1,6 @@
+Python 3.7.8
+i 1 :: slice_size 10
+  slice ['', 'u2(int,float)', 'cx()', 'cx()', 'u2(int,float)', 'u2(int,float)', 'x()', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', 'cx()', 'cx()', 'x()', 'u2(int,float)', 'u2(int,float)', 'x()', '', 'u2(int,float)'] == next_slice ['', 'u2(int,float)', 'cx()', 'cx()', 'u2(int,float)', 'u2(int,float)', 'x()', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', 'cx()', 'cx()', 'x()', 'u2(int,float)', 'u2(int,float)', 'x()', '', 'u2(int,float)']
+  metric  value
+0    ROC      1
+DONE!

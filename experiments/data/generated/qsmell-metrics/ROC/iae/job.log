@@ -1,0 +1,12 @@
+Python 3.7.8
+i 0 :: slice_size 8
+  slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', ''] == next_slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', '']
+i 8 :: slice_size 8
+  slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', ''] == next_slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', '']
+i 16 :: slice_size 8
+  slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', ''] == next_slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', '']
+i 24 :: slice_size 8
+  slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', ''] == next_slice ['u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'u2(int,float)', '', 'x()', '', 'u2(int,float)', '', 'u3(ParameterExpression,ParameterExpression,ParameterExpression)', '', 'x()', '', 'u1(float)', '', 'x()', '']
+  metric  value
+0    ROC      4
+DONE!

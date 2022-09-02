@@ -1,0 +1,18 @@
+Python 3.7.8
+i 31 :: slice_size 1
+  slice ['', '', 'u1(float)', ''] == next_slice ['', '', 'u1(float)', '']
+i 40 :: slice_size 1
+  slice ['', '', 'u1(float)', ''] == next_slice ['', '', 'u1(float)', '']
+i 56 :: slice_size 1
+  slice ['u1(float)', '', 'u2(int,float)', ''] == next_slice ['u1(float)', '', 'u2(int,float)', '']
+i 63 :: slice_size 1
+  slice ['u1(float)', '', 'u2(int,float)', ''] == next_slice ['u1(float)', '', 'u2(int,float)', '']
+i 95 :: slice_size 1
+  slice ['', '', 'u1(float)', ''] == next_slice ['', '', 'u1(float)', '']
+i 104 :: slice_size 1
+  slice ['', '', 'u1(float)', ''] == next_slice ['', '', 'u1(float)', '']
+i 120 :: slice_size 1
+  slice ['u1(float)', '', 'u2(int,float)', ''] == next_slice ['u1(float)', '', 'u2(int,float)', '']
+  metric  value
+0    ROC      7
+DONE!
