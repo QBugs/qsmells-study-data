@@ -24,6 +24,9 @@ wget --version > /dev/null 2>&1 || die "[ERROR] Could not find 'wget' to downloa
 # Check whether 'git' is available
 git --version > /dev/null 2>&1 || die "[ERROR] Could not find 'git' to clone git repositories. Please install 'git' and re-run the script."
 
+# Check whether 'perl' is available
+perl --version > /dev/null 2>&1 || die "[ERROR] Could not find 'perl'. Please install 'perl' and re-run the script."
+
 # Check whether 'Rscript' is available
 Rscript --version > /dev/null 2>&1 || die "[ERROR] Could not find 'Rscript' to perform, e.g., statistical analysis. Please install 'Rscript' and re-run the script."
 
@@ -276,6 +279,6 @@ echo "Setting up R..."
 Rscript "$SCRIPT_DIR/get-libraries.R" || die "[ERROR] Failed to install/load all required R packages!"
 
 echo ""
-echo "DONE! All tools have been successfully prepared."
+echo "DONE! All tools have been successfully installed and configured."
 
 # EOF
