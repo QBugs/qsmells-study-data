@@ -3,7 +3,7 @@
 # ------------------------------------------------------------------------------
 # This script downloads and sets up the following tools:
 #   - [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv) and [Virtualenv](https://virtualenv.pypa.io)
-#   - [PySmell](https://github.com/QBugs/PySmell)
+#   - [QSmell](https://github.com/jose/qsmell)
 #   - [Qiskit](https://github.com/Qiskit)
 #   - [Cloc](https://github.com/AlDanial/cloc)
 #   - [R](https://www.r-project.org)
@@ -159,25 +159,25 @@ deactivate                                      || die "[ERROR] Failed to deacti
 rm ".python-version"                            || die
 
 #
-# Get PySmell
+# Get QSmell
 #
 echo ""
-echo "Setting up PySmell..."
+echo "Setting up QSmell..."
 
-PYSMELL_DIR_PATH="$SCRIPT_DIR/pysmell"
+QSMELL_DIR_PATH="$SCRIPT_DIR/qsmell"
 
 # Remove any previous file and directory
-rm -rf "$PYSMELL_DIR_PATH"
+rm -rf "$QSMELL_DIR_PATH"
 
-git clone https://github.com/QBugs/PySmell.git "$PYSMELL_DIR_PATH"
-if [ "$?" -ne "0" ] || [ ! -d "$PYSMELL_DIR_PATH" ]; then
-  die "[ERROR] Clone of 'PySmell' failed!"
+git clone https://github.com/jose/qsmell "$QSMELL_DIR_PATH"
+if [ "$?" -ne "0" ] || [ ! -d "$QSMELL_DIR_PATH" ]; then
+  die "[ERROR] Clone of 'QSmell' failed!"
 fi
 
 pushd . > /dev/null 2>&1
-cd "$PYSMELL_DIR_PATH"
+cd "$QSMELL_DIR_PATH"
   # Switch to lastest commit
-  git checkout f5e9673a3d1b97f8376b7f3884ca0bee5545e1fd || die "[ERROR] Commit 'f5e9673a3d1b97f8376b7f3884ca0bee5545e1fd' not found!"
+  git checkout v0.0.1 || die "[ERROR] Commit 'v0.0.1' not found!"
   # Activate virtual environment
   source "$SCRIPT_DIR/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   # Install tool's dependencies

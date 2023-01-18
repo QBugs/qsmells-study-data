@@ -10,8 +10,8 @@ In the top-level directory [`tools/`](tools/), there is a script named [`get-too
   * [machine-learning (v0.4.0)](https://github.com/Qiskit/qiskit-machine-learning.git)
   * [nature (v0.4.3)](https://github.com/Qiskit/qiskit-nature.git)
 - Installing a specific version of Python (i.e., v3.7.8) in the top-level directory [`tools/`](tools/).
-- Configuring an isolated Python environment, in the top-level directory [`tools/`](tools/), to run any Python code, e.g., the [QSmell](tools/qsmell) tool.  We achieve this with a combination of [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv) and [Virtualenv](https://virtualenv.pypa.io).
-- Installing [QSmell](tools/qsmell) in the isolated Python environment.
+- Configuring an isolated Python environment, in the top-level directory [`tools/`](tools/), to run any Python code, e.g., the [QSmell](https://github.com/jose/qsmell) tool.  We achieve this with a combination of [Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv) and [Virtualenv](https://virtualenv.pypa.io).
+- Cloning and installing [QSmell v0.0.1](https://github.com/jose/qsmell) in the isolated Python environment.
 - Installing the following [R](https://www.r-project.org)'s packages under user's R's library directory through the [`tools/get-libraries.R`](tools/get-libraries.R) script:
   * [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html)
   * [stringr: Simple, Consistent Wrappers for Common String Operations](https://cran.r-project.org/web/packages/stringr/index.html)

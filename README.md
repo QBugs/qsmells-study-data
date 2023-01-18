@@ -15,6 +15,18 @@ If you use this artifact for academic purposes, please cite it as
 }
 ```
 
+in case you only want to cite the associated tool, [QSmell](https://github.com/jose/qsmell), please cite it as
+
+```Bibtex
+@misc{QSmellV001,
+  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Ahmed, Iftekhar},
+  title = {{QSmell v0.0.1}},
+  year = {2023},
+  publisher = {GitHub},
+  url = {https://github.com/jose/qsmell}
+}
+```
+
 in case you only want to cite the associated paper, please cite it as
 
 ```Bibtex
@@ -45,7 +57,6 @@ Each top-level directory in this repository provides the required scripts and da
 | [`subjects/`](subjects/)         | The subjects (i.e., quantum programs) used in the empirical evaluation |
 | [`survey/`](survey/)             | Questions asked and answers provided by participants of the survey |
 | [`tools/`](tools/)               | Local directory that keeps all required tools and environments to run those tools |
-| [`tools/qsmell/`](tools/qsmell/) | QSmell's source code |
 | [`utils/`](utils/)               | Utility scripts that are used by more than one experiment / analysis |
 
 Each top-level directory has the following structure:

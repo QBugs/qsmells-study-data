@@ -2,7 +2,7 @@
 
 The following sections provides step-by-step instructions to repeat and reproduce the analyses, tables, and figures reported in the associated paper.
 
-## Run [`QSmell`](tools/qsmell/) on a quantum program and specific code smell
+## Run [`QSmell`](https://github.com/jose/qsmell) on a quantum program and specific code smell
 
 In the directory [`experiments/scripts/`](experiments/scripts/), run the following command as
 
@@ -13,7 +13,7 @@ bash run-qsmell.sh \
   --output_file_path <path>
 ```
 
-for example, to invoke [`QSmell`](tools/qsmell/) with the quantum-specific smell `IdQ` on the `shor` quantum program, run
+for example, to invoke [`QSmell`](https://github.com/jose/qsmell) with the quantum-specific smell `IdQ` on the `shor` quantum program, run
 
 ```bash
 bash run-qsmell.sh \
