@@ -155,7 +155,7 @@ compute_thresholds <- function(df, overall_thresholds=FALSE) {
     }
   }
 
-  # Manual set thresholds
+  # Manual set recommended thresholds
   thresholds$'value'[thresholds$'metric' == 'CG']  <- 1
   thresholds$'value'[thresholds$'metric' == 'LC']  <- 0.50
   thresholds$'value'[thresholds$'metric' == 'IM']  <- 1
