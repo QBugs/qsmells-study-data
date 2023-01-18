@@ -6,9 +6,9 @@
 #
 # Usage example:
 #    python quantum_circuit_to_draw.py
-#        --module-name <str, e.g., wrapper_ch04_02_teleport_fly>
+#        --module-name <str, e.g., wrapper_adapt_vqe>
 #        --output-type <str, i.e., text, latex_source, or mpl>
-#        --output-file <path, e.g., ch04_02_teleport_fly.>
+#        --output-file <path, e.g., adapt_vqe.txt>
 # ------------------------------------------------------------------------------
 
 import argparse

@@ -35,10 +35,10 @@
 #
 # Or using its command line version as:
 #    python quantum_circuit_to_matrix.py
-#        --module-name <str, e.g., wrapper_ch04_02_teleport_fly>
+#        --module-name <str, e.g., wrapper_adapt_vqe>
 #        [--justify <str, i.e., "left" or "none">]
 #        [--transpile <bool, transpile the circuit, if enable>]
-#        --output-file <path, e.g., ch04_02_teleport_fly.csv>
+#        --output-file <path, e.g., adapt_vqe.csv>
 # ------------------------------------------------------------------------------
 
 import argparse

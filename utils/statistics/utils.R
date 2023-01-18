@@ -5,7 +5,6 @@
 # Common external packages
 library('data.table') # install.packages('data.table')
 library('stringr') # install.packages('stringr')
-library('ggplot2') # install.packages('ggplot2')
 
 # --------------------------------------------------------------------- Wrappers
 
@@ -21,73 +20,6 @@ load_CSV_GZ <- function(csv_path) {
 
 replace_string <- function(string, find, replace) {
   gsub(find, replace, string)
-}
-
-embed_fonts_in_a_pdf <- function(pdf_path) {
-  library('extrafont') # install.packages('extrafont')
-  embed_fonts(pdf_path, options='-dSubsetFonts=true -dEmbedAllFonts=true -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dMaxSubsetPct=100')
-}
-
-# ------------------------------------------------------------------------- Plot
-
-#
-# Plots the provided text on a dedicated page.  This function is usually used to
-# separate plots for multiple analyses in the same PDF.
-#
-plot_label <- function(text) {
-  library('ggplot2') # install.packages('ggplot2')
-  p <- ggplot() + annotate('text', label=text, x=4, y=25, size=8) + theme_void()
-  print(p)
-}
-
-# ------------------------------------------------------------------------ Stats
-
-#
-# Computes the Vargha-Delaney A measure for two populations a and b.
-#
-# a: a vector of real numbers
-# b: a vector of real numbers
-# Returns: A real number between 0 and 1
-#
-A12 <- function(a, b) {
-  if (length(a) == 0 && length(b) == 0) {
-    return(0.5)
-  } else if (length(a) == 0) {
-    # motivation is that we have no data for "a" but we do for "b".
-    # maybe the process generating "a" always fail (e.g. out of memory)
-    return(0)
-  } else if (length(b) == 0) {
-    return(1)
-  }
-
-  # Compute the rank sum (Eqn 13)
-  r = rank(c(a,b))
-  r1 = sum(r[seq_along(a)])
-
-  # Compute the measure (Eqn 14)
-  m = length(a)
-  n = length(b)
-  #A = (r1/m - (m+1)/2)/n
-  A = (2 * r1 - m * (m + 1)) / (2 * m * n) # to avoid float error precision
-
-  return(A)
-}
-
-#
-# Return true if statistical significant according to wilcox.test, false otherwise.
-#
-# Wilcoxon–Mann–Whitney test, a nonparametric test of the null hypothesis that,
-# for randomly selected values X and Y from two populations, the probability of
-# X being greater than Y is equal to the probability of Y being greater than X.
-#
-wilcox_test <- function(a, b) {
-  w = wilcox.test(a, b, exact=FALSE, paired=FALSE)
-  pv = w$p.value
-  if (!is.nan(pv) && pv < 0.05) {
-    return(TRUE)
-  }
-
-  return(FALSE)
 }
 
 # ---------------------------------------------------------------- Study related
