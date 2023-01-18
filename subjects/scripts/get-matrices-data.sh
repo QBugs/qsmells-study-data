@@ -10,7 +10,7 @@
 # Usage:
 # get-matrices-data.sh
 #   [--subjects_file_path <path, e.g., ../data/subjects.csv>]
-#   [--matrices_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix]
+#   [--matrices_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>]
 #   [--output_file_path <path, e.g., ../data/generated/matrices-data.csv>]
 #   [help]
 # ------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ source "$SCRIPT_DIR/../../utils/scripts/utils.sh" || exit 1
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} [--subjects_file_path <path, e.g., ../data/subjects.csv>] [--matrices_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix] [--output_file_path <path, e.g., ../data/generated/matrices-data.csv>] [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} [--subjects_file_path <path, e.g., ../data/subjects.csv>] [--matrices_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>] [--output_file_path <path, e.g., ../data/generated/matrices-data.csv>] [help]"
 if [ "$#" -ne "0" ] && [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] && [ "$#" -ne "6" ]; then
   die "$USAGE"
 fi
