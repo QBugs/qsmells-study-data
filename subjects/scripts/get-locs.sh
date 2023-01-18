@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # ------------------------------------------------------------------------------
-# This script ...
+# This script collects the number lines of code in quantum programs.
 #
 # Usage:
 # get-locs.sh
