@@ -1,11 +1,12 @@
 # ------------------------------------------------------------------------------
-# This script performances inter-rater reliability Cohen's Kappa.
+# This script performances inter-rater reliability Cohen's Kappa of Rater A vs.
+# QSmell and prints out it as a Latex table.
 #
 # Usage:
-#   Rscript qsmell-inter-rater-reliability.R
-#     <input file path, e.g., ../data/peer-evaluation-of-qsmell.csv>
+#   Rscript raters-vs-qsmell-inter-rater-reliability-as-table.R
+#     <input file path, e.g., ../data/peer-evaluation-of-qsmell-v1.csv>
 #     <qsmells generated file path, e.g., ../data/generated/qsmell-metrics/data.csv>
-#     <output file path, e.g., qsmell-inter-rater-reliability.tex>
+#     <output file path, e.g., raters-vs-qsmell-inter-rater-reliability.tex>
 # ------------------------------------------------------------------------------
 
 source('../../utils/statistics/utils.R')
@@ -17,7 +18,7 @@ library('caret') # install.packages('caret')
 
 args = commandArgs(trailingOnly=TRUE)
 if (length(args) != 3) {
-  stop('USAGE: Rscript qsmell-inter-rater-reliability.R <input file path, e.g., ../data/peer-evaluation-of-qsmell.csv> <qsmells generated file path, e.g., ../data/generated/qsmell-metrics/data.csv>')
+  stop('USAGE: Rscript raters-vs-qsmell-inter-rater-reliability-as-table.R <input file path, e.g., ../data/peer-evaluation-of-qsmell-v1.csv> <qsmells generated file path, e.g., ../data/generated/qsmell-metrics/data.csv> <output file path, e.g., raters-vs-qsmell-inter-rater-reliability.tex>')
 }
 
 # Args
@@ -25,38 +26,13 @@ RATERS_DATA_FILE  <- args[1]
 QSMELLS_DATA_FILE <- args[2]
 OUTPUT_FILE       <- args[3]
 
-# ---------------------------------------------------------- Rater A vs. Rater B
+# ------------------------------------------------------------------------- Main
 
 # Load raters' data
 raters_data <- load_CSV(RATERS_DATA_FILE) # rater,name,metric,value
 # Add custom column
 raters_data$'name-metric' <- paste(raters_data$'name', raters_data$'metric', sep='-')
 print(raters_data) # debug
-
-# Get data per rater
-rater_A <- rep(NA, times=length(unique(raters_data$'name-metric')))
-rater_B <- rep(NA, times=length(unique(raters_data$'name-metric')))
-# As data might not be sorted, we manually get data per rater
-i <- 1
-for (name_metric in unique(raters_data$'name-metric')) {
-  name_metric_mask <- raters_data$'name-metric' == name_metric
-  rater_A[i]       <- raters_data$'value'[name_metric_mask & raters_data$'rater' == 'A']
-  rater_B[i]       <- raters_data$'value'[name_metric_mask & raters_data$'rater' == 'B']
-  i <- i + 1
-}
-
-rates <- cbind(rater_A, rater_B)
-print(rates) # debug
-
-# Measure simple agreement.  By setting tolerance to 0, we have forced the `agree`
-# function to require both columns to have the exact same value for it to be
-# considered agreement.
-agree(rates, tolerance=0)
-
-# Compute Cohen's kappa
-kappa2(rates)
-
-# ----------------------------------------------------------- QSmell vs. Rater A
 
 # Filter out Rater's A data
 raters_data <- raters_data[raters_data$'rater' == 'A', ]
