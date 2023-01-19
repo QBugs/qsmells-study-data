@@ -1,6 +1,6 @@
 # Status
 
-This markdown file states what kind of [badge(s)](https://www.acm.org/publications/policies/artifact-review-and-badging-current) the authors are applying for as well as the reasons why the authors believe that the artifact deserves that badge(s).
+This markdown file states what kind of [badge(s)](https://www.acm.org/publications/policies/artifact-review-and-badging-current) the authors are applying for, as well as the reasons why the authors believe that the artifact deserves that badge(s).
 
 - **Artifacts Evaluated - Reusable**
 
