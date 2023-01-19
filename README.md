@@ -48,7 +48,7 @@ in case you only want to cite the associated paper, please cite it as
 
 ## Structure
 
-- [`README.md`](README.md): Describes this artifact and from where it can be obtained.
+- [`README.md`](README.md): Provides a bird eye view of this artifact, from where it can be obtained, and how should it be cited.
 
 - [`REQUIREMENTS.md`](REQUIREMENTS.md): Describes the software and its environment required (e.g., operating system) by this artifact, and user's expected skills.
 
