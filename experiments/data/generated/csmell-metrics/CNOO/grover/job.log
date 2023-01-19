@@ -1,6 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py
-(11, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 239, 77, 2, 10)
-  metric  value
-0   CNOO     10
-DONE!

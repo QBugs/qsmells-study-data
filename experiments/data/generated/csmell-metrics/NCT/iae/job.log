@@ -1,7 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py
-(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py', 285, 2, 1)
-(6, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py', 286, 2, 1)
-  metric  value
-0    NCT      1
-DONE!

@@ -1,6 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py
-(9, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-nature/qiskit_nature/algorithms/ground_state_solvers/adapt_vqe.py', 290, 29, 1, 8)
-  metric  value
-0    NOC     29
-DONE!

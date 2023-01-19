@@ -1,7 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py
-(5, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 29, 7)
-(5, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_amplifiers/grover.py', 338, 4)
-  metric  value
-0   CLOC      7
-DONE!

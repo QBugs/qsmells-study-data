@@ -1,6 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/distribution_learners/qgan/qgan.py
-(11, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-machine-learning/qiskit_machine_learning/algorithms/distribution_learners/qgan/qgan.py', 352, 32, 2, 8)
-  metric  value
-0   CNOO      8
-DONE!

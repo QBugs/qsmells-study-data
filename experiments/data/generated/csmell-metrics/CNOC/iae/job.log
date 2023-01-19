@@ -1,8 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py
-(11, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py', 273, 49, 1, 6)
-(11, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py', 315, 65, 1, 15)
-(11, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/amplitude_estimators/iae.py', 418, 64, 1, 6)
-  metric  value
-0   CNOC     65
-DONE!

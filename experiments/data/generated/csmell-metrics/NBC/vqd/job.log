@@ -1,7 +1,0 @@
-Python 3.7.8
-[DEBUG] Running PySmell on /Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/eigen_solvers/vqd.py
-(4, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/eigen_solvers/vqd.py', 52, 2)
-(4, '/Users/jose/Research/qsmells/qsmells-study-data/experiments/scripts/../../tools/qiskit-terra/qiskit/algorithms/eigen_solvers/vqd.py', 732, 2)
-  metric  value
-0    NBC      2
-DONE!
