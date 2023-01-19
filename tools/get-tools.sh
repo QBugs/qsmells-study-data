@@ -6,7 +6,7 @@
 #   - [QSmell](https://github.com/jose/qsmell)
 #   - [Qiskit](https://github.com/Qiskit)
 #   - [Cloc](https://github.com/AlDanial/cloc)
-#   - [R](https://www.r-project.org)
+#   - [R's packages](https://www.r-project.org)
 #
 # Usage:
 # get-tools.sh
@@ -27,8 +27,14 @@ git --version > /dev/null 2>&1 || die "[ERROR] Could not find 'git' to clone git
 # Check whether 'perl' is available
 perl --version > /dev/null 2>&1 || die "[ERROR] Could not find 'perl'. Please install 'perl' and re-run the script."
 
+# Check whether parallel is available
+parallel --version > /dev/null 2>&1 || die "[ERROR] Could not find 'parallel' to run experiments/scripts in parallel. Please install 'GNU Parallel' and re-run the script."
+
 # Check whether 'Rscript' is available
 Rscript --version > /dev/null 2>&1 || die "[ERROR] Could not find 'Rscript' to perform, e.g., statistical analysis. Please install 'Rscript' and re-run the script."
+
+# Check whether ImageMagick's convert is available
+convert --version > /dev/null 2>&1 || die "[ERROR] Could not find 'convert' to be able to, e.g., convert PDF into PNG. Please install 'ImageMagick' and re-run the script."
 
 # ------------------------------------------------------------------------- Util
 
