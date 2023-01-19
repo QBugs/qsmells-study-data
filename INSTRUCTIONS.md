@@ -8,9 +8,10 @@ All commands / scripts have been tested and used on a Unix-based machine and the
 
 The subsequent analyses require the following tools to be installed and available on your machine:
 - [GIT](https://git-scm.com) and [GNU wget](https://www.gnu.org/software/wget)
-- [Perl](https://www.perl.org)
+- [Perl - Programming language](https://www.perl.org)
 - [GNU Parallel](https://www.gnu.org/software/parallel)
-- [R](https://www.r-project.org)
+- [R Project for Statistical Computing](https://www.r-project.org)
+- [ImageMagick - Convert, Edit, or Compose Digital Images](https://imagemagick.org)
 
 Visit the [REQUIREMENTS.md](REQUIREMENTS.md) file for more details.
 
