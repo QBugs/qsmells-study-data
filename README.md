@@ -54,7 +54,7 @@ in case you only want to cite the associated paper, please cite it as
 
 - [`INSTALL.md`](INSTALL.md): Describes the procedure to install the required software and also provides usage examples on how to assess whether the installation of each software finished successfully.
 
-- [`INSTRUCTIONS.md`](INSTRUCTIONS.md): Describes the procedure, accompanied by small examples whenever possible, to repeat and reproduce the results presented in the associated paper.
+- [`INSTRUCTIONS.md`](INSTRUCTIONS.md): Describes the procedures, accompanied by small examples whenever possible, to repeat and reproduce the results presented in the associated paper.
 
 - [`AUTHORS.md`](AUTHORS.md): The authors list.
 
