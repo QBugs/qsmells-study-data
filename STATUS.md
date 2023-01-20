@@ -4,7 +4,7 @@ This markdown file states what kind of [badge(s)](https://www.acm.org/publicatio
 
 - **Artifacts Evaluated - Reusable**
 
-The artifact is of a quality that significantly exceeds minimal functionality.  Moreover, the artifact fulfils all the minimum and optional criteria recommended and listed in [here (Section 4)](https://conf.researchr.org/getImage/icse-2023/orig/fse_artifacts_submission_reviewing_guidelines.pdf) for the **Artifacts Evaluated - Reusable** badge.  In detail:
+The artifact is of a quality that significantly exceeds minimal functionality.  Moreover, the artifact fulfills all the minimum and optional criteria recommended and listed in [here (Section 4)](https://conf.researchr.org/getImage/icse-2023/orig/fse_artifacts_submission_reviewing_guidelines.pdf) for the **Artifacts Evaluated - Reusable** badge.  In detail:
 
 - [X] The artifact is well and carefully documented, and offers an inventory of the contents and sufficient description to enable the artifact to be exercised.
 
