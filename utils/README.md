@@ -54,7 +54,7 @@ q_3: ────────────────■────────
 
 - [`scripts/quantum_circuit_to_matrix.py`](scripts/quantum_circuit_to_matrix.py)
 
-Given a [qiskit.circuit.QuantumCircuit](https://qiskit.org/documentation/apidoc/circuit.html) object, this script "pretty print" it as a coverage matrix.  Each row represents a quantum or classical bit, each column represents a timestamp in the circuit, and each cell represents a quantum operation performed in circuit.
+Given a [qiskit.circuit.QuantumCircuit](https://qiskit.org/documentation/apidoc/circuit.html) object, this script "pretty print" it as an execution matrix.  Each row represents a quantum or classical bit, each column represents a timestamp in the circuit, and each cell represents a quantum operation performed in circuit.
 
 Usage example through its API
 
@@ -96,10 +96,10 @@ Usage example through its command line version
 
 ```bash
 python quantum_circuit_to_matrix.py \
-  --module-name <str, e.g., wrapper_ch04_02_teleport_fly> \
+  --module-name <str, e.g., wrapper_adapt_vqe> \
   [--justify <str, i.e., "left" or "none">] \
   [--transpile <bool, transpile the circuit, if enable>] \
-  --output-file <path, e.g., ch04_02_teleport_fly.csv>
+  --output-file <path, e.g., adapt_vqe.csv>
 ```
 
 for example, to draw the quantum circuit of the quantum program `adapt_vqe` as a matrix (see Section V.A.1), run
