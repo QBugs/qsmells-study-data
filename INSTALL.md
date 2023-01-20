@@ -2,7 +2,7 @@
 
 This markdown file provides installation instructions of any required software.
 
-In the top-level directory [`tools/`](tools/), there is a script named [`get-tools.sh`](tools/get-tools.sh) which is responsible for automatically
+In the top-level directory [`tools/`](tools/), there is a script named [`get-tools.sh`](tools/get-tools.sh) which is responsible for automatically:
 
 - Assessing whether the requirements described in [REQUIREMENTS.md](REQUIREMENTS.md) are fulfilled.
 - Cloning Qiskit's repositories to the top-level directory [`tools/`](tools/):
