@@ -6,7 +6,7 @@ If you use this artifact for academic purposes, please cite it as
 
 ```Bibtex
 @misc{ChenQSmell2023Data,
-  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Ahmed, Iftekhar},
+  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Souto, André and Ahmed, Iftekhar},
   title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Data repository v0.0.1}},
   year = {2023},
   publisher = {Zenodo},
@@ -19,7 +19,7 @@ in case you only want to cite the associated tool, [QSmell](https://github.com/j
 
 ```Bibtex
 @misc{QSmellV001,
-  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Ahmed, Iftekhar},
+  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Souto, André and Ahmed, Iftekhar},
   title = {{QSmell v0.0.1}},
   year = {2023},
   publisher = {GitHub},
@@ -31,7 +31,7 @@ in case you only want to cite the associated paper, please cite it as
 
 ```Bibtex
 @inproceedings{ChenQSmell2023,
-  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Ahmed, Iftekhar},
+  author = {Chen, Qihong and Câmara, Rúben and Campos, José and Souto, André and Ahmed, Iftekhar},
   booktitle = {2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)},
   title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing}},
   year = {2023},
@@ -48,15 +48,15 @@ in case you only want to cite the associated paper, please cite it as
 
 ## Structure
 
-- [`README.md`](README.md): Provides a bird eye view of this artifact, from where it can be obtained, and how should it be cited.
+- [`README.md`](README.md): Provides a bird's-eye view of this artifact, from where it can be obtained, and how should it be cited.
 
-- [`REQUIREMENTS.md`](REQUIREMENTS.md): Describes the software and its environment required (e.g., operating system) by this artifact, and user's expected skills.
+- [`REQUIREMENTS.md`](REQUIREMENTS.md): Describes the software and its required environment (e.g., operating system) by the artifact and the user’s expected skills
 
 - [`INSTALL.md`](INSTALL.md): Describes the procedure to install the required software and also provides usage examples on how to assess whether the installation of each software finished successfully.
 
-- [`INSTRUCTIONS.md`](INSTRUCTIONS.md): Describes the procedures, accompanied by small examples whenever possible, to repeat and reproduce the results presented in the associated paper.
+- [`INSTRUCTIONS.md`](INSTRUCTIONS.md): Describes the procedures to install the required software and provides usage examples on assessing whether each software installation finished successfully.
 
-- [`AUTHORS.md`](AUTHORS.md): The authors list.
+- [`AUTHORS.md`](AUTHORS.md): Contains the name of author.
 
 - [`LICENSE.md`](LICENSE.md): Describes the distribution rights.
 
@@ -68,9 +68,9 @@ Each top-level directory in this repository provides the required scripts and da
 | Directory                        | Description |
 |:---------------------------------|:------------|
 | [`experiments/`](experiments/)   | Study the prevalence of quantum-specific smells on quantum programs |
-| [`samples/`](samples/)           | Examples used in Section IV in the associated paper |
+| [`samples/`](samples/)           | Examples used in Section IV of the associated paper |
 | [`subjects/`](subjects/)         | The subjects (i.e., quantum programs) used in the empirical evaluation |
-| [`survey/`](survey/)             | Questions asked and answers provided by participants of the survey |
+| [`survey/`](survey/)             | Questions asked and answers provided by survey's participants |
 | [`tools/`](tools/)               | Local directory that keeps all required tools and environments to run those tools |
 | [`utils/`](utils/)               | Utility scripts that are used by more than one experiment / analysis |
 
