@@ -63,7 +63,7 @@ in case you only want to cite the associated paper, please cite it as
 - [`STATUS.md`](STATUS.md): States what kind of [badge(s)](https://www.acm.org/publications/policies/artifact-review-and-badging-current) the authors listed in [`AUTHORS.md`](AUTHORS.md) are applying for, as well as the reasons why the authors believe that the artifact deserves that badge(s).
 
 
-Each top-level directory in this repository provides the required scripts and data to perform a specific analysis / experiment described in the associated paper.
+Each top-level directory in the artifact provides the required scripts and data to perform a specific analysis / experiment described in the associated paper.
 
 | Directory                        | Description |
 |:---------------------------------|:------------|

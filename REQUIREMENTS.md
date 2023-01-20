@@ -1,6 +1,6 @@
 # Requirements
 
-This markdown file focus on the requirements of any software or script available or used in the artifact (i.e., repository).
+This markdown file focus on the requirements of any software or script available or used in the artifact.
 
 ## User
 
@@ -8,7 +8,7 @@ It is expected / assumed the user is able to navigate in / out directories on th
 
 ## Machine
 
-A Unix-based machine.  Any bash command, tool, or script available or used in this repository has been tested only on a Unix-based machine and therefore might not work on other operating systems, e.g., Windows.
+A Unix-based machine.  Any bash command, tool, or script available or mentioned in the artifact's documentation has been tested only on a Unix-based machine and therefore might not work on other operating systems, e.g., Windows.
 
 ## Software
 
