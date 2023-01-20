@@ -50,7 +50,7 @@ in case you only want to cite the associated paper, please cite it as
 
 - [`README.md`](README.md): Provides a bird's-eye view of this artifact, from where it can be obtained, and how should it be cited.
 
-- [`REQUIREMENTS.md`](REQUIREMENTS.md): Describes the software and its required environment (e.g., operating system) by the artifact and the user’s expected skills
+- [`REQUIREMENTS.md`](REQUIREMENTS.md): Describes the software and its required environment (e.g., operating system) by the artifact and the user's expected skills
 
 - [`INSTALL.md`](INSTALL.md): Describes the procedure to install the required software and also provides usage examples on how to assess whether the installation of each software finished successfully.
 
