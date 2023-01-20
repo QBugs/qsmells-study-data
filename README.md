@@ -1,4 +1,4 @@
-# The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing
+# The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Artifact
 
 This artifact, i.e., repository, contains all scripts, data, and instructions required to [repeat and reproduce](https://www.acm.org/publications/policies/artifact-review-and-badging-current) the study 'The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing'.
 
@@ -7,7 +7,7 @@ If you use this artifact for academic purposes, please cite it as
 ```Bibtex
 @misc{ChenQSmell2023Data,
   author = {Chen, Qihong and Câmara, Rúben and Campos, José and Souto, André and Ahmed, Iftekhar},
-  title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Data repository v0.0.1}},
+  title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Artifact}},
   year = {2023},
   publisher = {Zenodo},
   doi = {??.???/???.?????},
