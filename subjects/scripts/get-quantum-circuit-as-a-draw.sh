@@ -56,7 +56,7 @@ done
 [ "$WRAPPER_NAME" != "" ]      || die "[ERROR] Missing --wrapper_name argument!"
 [ "$OUTPUT_DIR_PATH" != "" ]   || die "[ERROR] Missing --output_dir_path argument!"
 # Check whether input files exit and it is not empty
-WRAPPER_FILE_PATH="$WRAPPERS_DIR_PATH/$WRAPPER_NAME.py"
+WRAPPER_FILE_PATH="$WRAPPERS_DIR_PATH/wrapper_$WRAPPER_NAME.py"
 [ -s "$WRAPPER_FILE_PATH" ]    || die "[ERROR] $WRAPPER_FILE_PATH does not exist or it is empty!"
 # Create output directory
 mkdir -p "$OUTPUT_DIR_PATH"    || die "[ERROR] Failed to create $OUTPUT_DIR_PATH!"
