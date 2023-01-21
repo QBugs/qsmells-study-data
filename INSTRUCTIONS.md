@@ -20,7 +20,7 @@ Visit the [REQUIREMENTS.md](REQUIREMENTS.md) file for more details.
 In the top-level directory [`tools/`](tools/), run the following command
 
 ```bash
-bash get-tools.sh # (~10 minutes)
+bash get-tools.sh # (~20 minutes)
 ```
 
 In case the execution does not finished successfully, the script will print out a message informing the user of the error.  One should follow the instructions to fix the error and re-run the script.  In case the execution of the script finished successfully, one should see the message `DONE! All tools have been successfully installed and configured.` on the stdout.
@@ -128,7 +128,6 @@ Given a wrapper to a quantum program, one could also draw each quantum circuit i
 ```bash
 bash get-quantum-circuit-as-a-draw.sh \
   --wrapper_name "qaoa" \
-  --transpile "true" \
   --output_dir_path ../data/generated/transpiled-quantum-circuit-as-draw # (< 1 minute)
 ```
 
@@ -209,7 +208,7 @@ To run, all smells on all programs one might use the [`experiments/scripts/run-q
 
 ```bash
 bash run-qsmell-on-all-subjects-all-metrics.sh \
-  --subjects_file_path ../data/subjects.csv \
+  --subjects_file_path ../../subjects/data/subjects.csv \
   --matrices_dir_path ../../subjects/data/generated/quantum-circuit-as-matrix \
   --transpiled_matrices_dir_path ../../subjects/data/generated/transpiled-quantum-circuit-as-matrix \
   --output_dir_path ../data/generated/qsmell-metrics # (~ 20 minutes)
