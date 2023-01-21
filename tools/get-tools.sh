@@ -187,7 +187,9 @@ cd "$QSMELL_DIR_PATH"
   # Activate virtual environment
   source "$SCRIPT_DIR/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   # Install tool's dependencies
-  python setup.py install               || die "[ERROR] Failed to install tool's requirements!"
+  pip install -r requirements.txt       || die "[ERROR] Failed to install QSmell's requirements!"
+  # Install tool
+  python setup.py install               || die "[ERROR] Failed to install QSmell!"
   # Deactivate virtual environment
   deactivate                            || die "[ERROR] Failed to deactivate virtual environment!"
 popd > /dev/null 2>&1
