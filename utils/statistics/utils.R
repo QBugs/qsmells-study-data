@@ -2,9 +2,24 @@
 # A set of utility functions.
 # ------------------------------------------------------------------------------
 
-# Common external packages
-library('data.table') # install.packages('data.table')
-library('stringr') # install.packages('stringr')
+# -------------------------------------------------------------------------- Env
+
+script_path <- function() {
+  # this code only works if `utils.R` is 'source'd, for a more comprehensive
+  # version of this function visit https://stackoverflow.com/a/15373917/998816
+  return(normalizePath(sys.frames()[[1]]$ofile))
+}
+
+script_dir_path <- function() {
+  return(dirname(script_path()))
+}
+
+platform      <- R.Version()$'platform'
+version       <- paste(R.Version()[c('major', 'minor')], collapse='.')
+local_library <- paste(script_dir_path(), '/../../tools/R/', platform, '-library/', version, sep='')
+if (!file.exists(local_library)) {
+  dir.create(local_library, showWarnings=TRUE, recursive=TRUE)
+}
 
 # --------------------------------------------------------------------- Wrappers
 

@@ -11,8 +11,8 @@
 
 source('../../utils/statistics/utils.R')
 
-library('irr') # install.packages('irr')
-library('caret') # install.packages('caret')
+library('irr', lib.loc=local_library) # install.packages('irr')
+library('caret', lib.loc=local_library) # install.packages('caret')
 
 # ------------------------------------------------------------------------- Args
 

@@ -284,7 +284,7 @@ perl "$SCRIPT_DIR/$CLOC_FILE" --version > /dev/null 2>&1 || die "[ERROR] cloc is
 echo ""
 echo "Setting up R..."
 
-Rscript "$SCRIPT_DIR/get-libraries.R" || die "[ERROR] Failed to install/load all required R packages!"
+Rscript "$SCRIPT_DIR/get-libraries.R" "$SCRIPT_DIR" || die "[ERROR] Failed to install/load all required R packages!"
 
 echo ""
 echo "DONE! All tools have been successfully installed and configured."

@@ -9,7 +9,7 @@
 
 source('../../utils/statistics/utils.R')
 
-library('irr') # install.packages('irr')
+library('irr', lib.loc=local_library) # install.packages('irr')
 
 # ------------------------------------------------------------------------- Args
 
