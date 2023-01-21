@@ -10,8 +10,8 @@ If you use this artifact for academic purposes, please cite it as
   title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Artifact}},
   year = {2023},
   publisher = {Zenodo},
-  doi = {??.???/???.?????},
-  url = {https://doi.org/??.???/???.?????}
+  doi = {10.5281/zenodo.7556360},
+  url = {https://doi.org/10.5281/zenodo.7556360}
 }
 ```
 

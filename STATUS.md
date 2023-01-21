@@ -22,12 +22,12 @@ The artifact is of a quality that significantly exceeds minimal functionality.  
 
 - **Artifacts Available**
 
-The artifact has been placed on a publicly accessible repository [link](<!-- TODO ZENODO LINK -->) along with a unique [Digital Object Identifier (DOI)](<!-- TODO DOI -->).  Moreover, the artifact fulfils all the minimum and optional criteria recommended and listed in [here (Section 4)](https://conf.researchr.org/getImage/icse-2023/orig/fse_artifacts_submission_reviewing_guidelines.pdf) for the **Artifacts Available** badge.  In detail:
+The artifact has been placed on a publicly accessible repository [link](https://doi.org/10.5281/zenodo.7556360) along with a unique [Digital Object Identifier (DOI)](10.5281/zenodo.7556360).  Moreover, the artifact fulfils all the minimum and optional criteria recommended and listed in [here (Section 4)](https://conf.researchr.org/getImage/icse-2023/orig/fse_artifacts_submission_reviewing_guidelines.pdf) for the **Artifacts Available** badge.  In detail:
 
 - [X] The artifact is available for public download from a repository without the need to register.
 
-- [X] The artifact is available for public download from a persistent repository with a stable URL: [link](<!-- TODO ZENODO LINK -->).
+- [X] The artifact is available for public download from a persistent repository with a stable URL: [link](https://doi.org/10.5281/zenodo.7556360).
 
-- [X] The artifact is associated with a Digital Object Identifier (DOI): [DOI](<!-- TODO DOI -->).
+- [X] The artifact is associated with a Digital Object Identifier (DOI): [DOI](10.5281/zenodo.7556360).
 
 - [X] (Optional criteria) The artifact provide explicit documentation on the authors (see [`AUTHORS.md`](AUTHORS.md)) and a template on how to cite the artifact and the associated paper (see [`README.md`](README.md)).
