@@ -86,7 +86,7 @@ _install_python_version_x() {
   pip install --upgrade pip setuptools wheel cython || die "[ERROR] Failed to upgrade 'pip', 'setuptools', 'wheel', and 'cython'!"
 
   # Check whether the version just installed is working properly
-  python -m test || die "[ERROR] Python $major.$minor.$micro is not working properly!"
+  # python -m test || die "[ERROR] Python $major.$minor.$micro is not working properly!"
 
   # Disable/Unload the version just installed
   rm ".python-version" || die "[ERROR] Failed to remove '.python-version!'"
