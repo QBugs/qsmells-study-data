@@ -29,11 +29,6 @@ _activate_virtual_environment() {
   source "$UTILS_SCRIPT_DIR/../../tools/env/bin/activate" || die "[ERROR] Failed to activate virtual environment!"
   python --version >&2
 
-  # Augment Python's PATH with O'Reilly's samples/Qiskit directory
-  OREILLY_SAMPLES_DIR="$UTILS_SCRIPT_DIR/../../tools/oreilly-qc.github.io/samples/Qiskit"
-  [ -d "$OREILLY_SAMPLES_DIR" ] || die "[ERROR] $OREILLY_SAMPLES_DIR does not exist!"
-  export PYTHONPATH="$OREILLY_SAMPLES_DIR:$PYTHONPATH"
-
   # Augment Python's PATH with our custom made scripts
   export PYTHONPATH="$UTILS_SCRIPT_DIR:$PYTHONPATH"
 
