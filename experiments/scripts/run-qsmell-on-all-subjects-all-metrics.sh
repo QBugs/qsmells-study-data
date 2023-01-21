@@ -7,7 +7,7 @@
 #
 # Usage:
 # run-qsmell-on-all-subjects-all-metrics.sh
-#   [--subjects_file_path <path, e.g., ../data/subjects.csv>]
+#   [--subjects_file_path <path, e.g., ../../subjects/data/subjects.csv>]
 #   [--matrices_dir_path <path, e.g., ../../subjects/data/generated/quantum-circuit-as-matrix]
 #   [--transpiled_matrices_dir_path <path, e.g., ../../subjects/data/generated/transpiled-quantum-circuit-as-matrix]
 #   [--output_dir_path <path, e.g., ../data/generated/qsmell-metrics>]
