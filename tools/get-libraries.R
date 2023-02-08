@@ -20,5 +20,5 @@ library('stringr', lib.loc=local_library)
 library('irr', lib.loc=local_library)
 library('caret', lib.loc=local_library)
 # Exit
-quit(save="no", status=0)
+quit(save='no', status=0)
 # EOF
