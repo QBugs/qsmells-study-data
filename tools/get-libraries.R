@@ -8,7 +8,7 @@ PATH <- args[1]
 # Load utils file
 source(paste(PATH, '/../utils/statistics/utils.R', sep=''))
 # R repository
-repository <- 'http://cran.us.r-project.org'
+repository <- 'https://cloud.r-project.org'
 # Install packages
 install.packages('data.table', lib=local_library, repos=repository)
 install.packages('stringr', lib=local_library, repos=repository)
