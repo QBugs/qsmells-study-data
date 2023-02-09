@@ -201,7 +201,7 @@ popd > /dev/null 2>&1
 # Switch to installed version
 pyenv local "3.7.8"                        || die "[ERROR] Failed to load Python v3.7.8!"
 # Activate virtual environment
-source env/bin/activate                    || die "[ERROR] Failed to activate virtual environment!"
+source "$SCRIPT_DIR/env/bin/activate"      || die "[ERROR] Failed to activate virtual environment!"
 # Install Qiskit
 pip install qiskit==0.37.0                 || die "[ERROR] Failed to install Qiskit!"
 # Install other modules
