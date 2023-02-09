@@ -77,11 +77,11 @@ Secondly, we must compute the *execution matrix* of each quantum circuit.  To ac
 
 ```bash
 bash get-quantum-circuit-as-a-matrix.sh \
-  --wrapper_name "qaoa" \
+  --wrapper_name "wrapper_qaoa" \
   --output_dir_path ../data/generated/quantum-circuit-as-matrix # (< 1 minute)
 
 bash get-quantum-circuit-as-a-matrix.sh \
-  --wrapper_name "qaoa" \
+  --wrapper_name "wrapper_qaoa" \
   --transpile "true" \
   --output_dir_path ../data/generated/transpiled-quantum-circuit-as-matrix # (< 1 minute)
 ```
@@ -107,16 +107,16 @@ To run the [`subjects/scripts/get-quantum-circuit-as-a-matrix.sh`](subjects/scri
 ```bash
 tail -n +2 ../data/subjects.csv | cut -f2 -d',' | while read -r name; do \
   bash get-quantum-circuit-as-a-matrix.sh \
-    --wrapper_name "$name" \
+    --wrapper_name "wrapper_$name" \
     --output_dir_path ../data/generated/quantum-circuit-as-matrix; \
-done # (~ 15 minutes)
+done # (< 2 minutes)
 
 tail -n +2 ../data/subjects.csv | cut -f2 -d',' | while read -r name; do \
   bash get-quantum-circuit-as-a-matrix.sh \
-    --wrapper_name "$name" \
+    --wrapper_name "wrapper_$name" \
     --transpile "true" \
     --output_dir_path ../data/generated/transpiled-quantum-circuit-as-matrix; \
-done # (~ 15 minutes)
+done # (~ 2 hours)
 ```
 
 Assuming the execution of both commands above finished successfully, the [`../data/generated/quantum-circuit-as-matrix/`](../data/generated/quantum-circuit-as-matrix/) and [`../data/generated/transpiled-quantum-circuit-as-matrix/`](../data/generated/transpiled-quantum-circuit-as-matrix/) directories should have 17 CVS files, as many as the number of quantum programs under study.
@@ -127,7 +127,7 @@ Given a wrapper to a quantum program, one could also draw each quantum circuit i
 
 ```bash
 bash get-quantum-circuit-as-a-draw.sh \
-  --wrapper_name "qaoa" \
+  --wrapper_name "wrapper_qaoa" \
   --output_dir_path ../data/generated/transpiled-quantum-circuit-as-draw # (< 1 minute)
 ```
 
