@@ -6,7 +6,7 @@ The following sections provides step-by-step instructions to repeat and reproduc
 
 All commands / scripts have been tested and used on a Unix-based machine and therefore might not work on other operating systems, e.g., Windows.  This document also assumes the reader is comfortable running bash commands and navigating in/out directories on the command line.
 
-The subsequent analyses require the following tools to be installed and available on your machine:
+The subsequent analyses require the following tools to be installed and available on your machine (unless the [docker](https://www.docker.com) option is used):
 - [GIT](https://git-scm.com) and [GNU wget](https://www.gnu.org/software/wget)
 - [Perl - Programming language](https://www.perl.org)
 - [GNU Parallel](https://www.gnu.org/software/parallel)
@@ -16,6 +16,26 @@ The subsequent analyses require the following tools to be installed and availabl
 Visit the [REQUIREMENTS.md](REQUIREMENTS.md) file for more details.
 
 ## Setup
+
+### [Docker](https://www.docker.com) option
+
+For an easy setup, we recommend our [docker image](https://hub.docker.com/r/josecarloscampos/qsmells-artifact) that includes all scripts, data, and instructions required to [repeat and reproduce](https://www.acm.org/publications/policies/artifact-review-and-badging-current) the study 'The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing'.  Otherwise, follow the setup instructions in the next section 'Non-Docker option'.
+
+First, pull the docker image
+
+```bash
+docker pull josecarloscampos/qsmells-artifact
+```
+
+Second, connect to the docker image
+
+```bash
+docker run --interactive --tty --privileged --workdir /qsmells-artifact/ josecarloscampos/qsmells-artifact
+```
+
+which should lead you to the root directory of the artifact.  Then, follow the following sections which provide step-by-step instructions on which commands to run to repeat and reproduce the experiments described in the associated paper.
+
+### Non-[Docker](https://www.docker.com) option
 
 In the top-level directory [`tools/`](tools/), run the following command
 
