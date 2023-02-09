@@ -55,7 +55,7 @@ _install_python_version_x() {
 
     echo "" >&2
     echo "On Ubuntu/Debian please install the following dependencies:" >&2
-    echo "sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl" >&2
+    echo "sudo apt-get install -y clang make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev lzma python3-openssl" >&2
 
     echo "" >&2
     echo "On Fedora/CentOS/RHEL please install the following dependencies:" >&2
