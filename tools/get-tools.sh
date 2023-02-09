@@ -77,7 +77,7 @@ _install_python_version_x() {
   # Switch to the version just installed
   pyenv local "$major.$minor.$micro" || die "[ERROR] Python $major.$minor.$micro is not available to pyenv!"
 
-  python_version=$(python --version 2>&1)
+  python_version=$(python --version 2>/dev/null)
   if [ "$python_version" != "Python $major.$minor.$micro" ]; then
     die "[ERROR] System is still using '$python_version' instead of $major.$minor.$micro!"
   fi
