@@ -7,6 +7,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y clang make b
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y bc wget git perl parallel r-base imagemagick
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --fix-missing -y vim # in case one would need to modify/adapt any script
 
+# Workaround to be able to convert a PNG file in a PDF file with `convert` from [ImageMagick](https://imagemagick.org/index.php)
+# https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
+RUN sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
+
 # Copy repository
 COPY . /qsmells-artifact
 
