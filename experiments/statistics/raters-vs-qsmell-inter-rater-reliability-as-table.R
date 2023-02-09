@@ -11,7 +11,11 @@
 
 source('../../utils/statistics/utils.R')
 
+library('lpSolve', lib.loc=local_library) # required by irr
 library('irr', lib.loc=local_library) # install.packages('irr')
+library('withr', lib.loc=local_library) # required by ggplot2
+library('ggplot2', lib.loc=local_library) # required by caret
+library('e1071', lib.loc=local_library) # required by caret
 library('caret', lib.loc=local_library) # install.packages('caret')
 
 # ------------------------------------------------------------------------- Args

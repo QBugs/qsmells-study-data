@@ -9,6 +9,7 @@
 
 source('../../utils/statistics/utils.R')
 
+library('lpSolve', lib.loc=local_library)
 library('irr', lib.loc=local_library) # install.packages('irr')
 
 # ------------------------------------------------------------------------- Args
