@@ -96,7 +96,7 @@ bash get-quantum-circuit-as-a-draw.sh \
 
 ```bash
 bash get-quantum-circuit-as-a-matrix.sh
-  --wrapper_name <name of the wrapper program to load and analyze, e.g., grover>
+  --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_grover>
   [--transpile <bool, false by default>]
   [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>]
   [help]
@@ -106,7 +106,7 @@ for example
 
 ```bash
 bash get-quantum-circuit-as-a-matrix.sh \
-  --wrapper_name grover \
+  --wrapper_name "wrapper_grover" \
   --transpile "true" \
   --output_dir_path ../data/generated/transpiled-quantum-circuit-as-matrix
 ```

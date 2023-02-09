@@ -8,7 +8,7 @@
 #
 # Usage:
 # get-quantum-circuit-as-a-matrix.sh
-#   --wrapper_name <name of the wrapper program to load and analyze, e.g., grover>
+#   --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_grover>
 #   [--transpile <bool, false by default>]
 #   [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>]
 #   [help]
@@ -22,7 +22,7 @@ WRAPPERS_DIR_PATH="$SCRIPT_DIR/wrappers"
 
 # ------------------------------------------------------------------------- Args
 
-USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., grover> [--transpile <bool, false by default>] [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>] [help]"
+USAGE="Usage: ${BASH_SOURCE[0]} --wrapper_name <name of the wrapper program to load and analyze, e.g., wrapper_grover> [--transpile <bool, false by default>] [--output_dir_path <path, e.g., ../data/generated/quantum-circuit-as-matrix>] [help]"
 if [ "$#" -ne "1" ] && [ "$#" -ne "2" ] && [ "$#" -ne "4" ] && [ "$#" -ne "6" ]; then
   die "$USAGE"
 fi
@@ -55,8 +55,9 @@ done
 [ "$WRAPPER_NAME" != "" ]      || die "[ERROR] Missing --wrapper_name argument!"
 [ "$OUTPUT_DIR_PATH" != "" ]   || die "[ERROR] Missing --output_dir_path argument!"
 # Check whether input files exit and it is not empty
-WRAPPER_FILE_PATH="$WRAPPERS_DIR_PATH/wrapper_$WRAPPER_NAME.py"
+WRAPPER_FILE_PATH="$WRAPPERS_DIR_PATH/$WRAPPER_NAME.py"
 [ -s "$WRAPPER_FILE_PATH" ]    || die "[ERROR] $WRAPPER_FILE_PATH does not exist or it is empty!"
+QUANTUM_PROGRAM_NAME=$(echo "$WRAPPER_NAME" | sed 's|^wrapper_||')
 # Create output directory
 mkdir -p "$OUTPUT_DIR_PATH"    || die "[ERROR] Failed to create $OUTPUT_DIR_PATH!"
 
@@ -67,7 +68,7 @@ _activate_virtual_environment
 # Augment Python's PATH with our custom wrappers
 export PYTHONPATH="$WRAPPERS_DIR_PATH:$PYTHONPATH"
 
-OUTPUT_FILE_PATH="$OUTPUT_DIR_PATH/$(echo $WRAPPER_NAME | sed 's|^wrapper_||').csv"
+OUTPUT_FILE_PATH="$OUTPUT_DIR_PATH/$QUANTUM_PROGRAM_NAME.csv"
 echo "[DEBUG] Going to process $WRAPPER_NAME (in $WRAPPER_FILE_PATH) and save it to $OUTPUT_FILE_PATH"
 
 if [ "$TRANSPILE" == "" ]; then
