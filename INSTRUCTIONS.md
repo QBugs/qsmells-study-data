@@ -222,6 +222,15 @@ It is highly recommend the use of the [`experiments/scripts/run-qsmell-on-all-su
 
 #### 2. Analyze [`QSmell's`](https://github.com/jose/qsmell) data
 
+- To generated Table IV -- Rater A/B vs. QSmell -- run, in the [`experiments/statistics/`](experiments/statistics/) directory, the following command:
+
+```bash
+Rscript raters-vs-qsmell-metrics-as-table.R \
+  ../data/peer-evaluation-of-qsmell-v1.csv \
+  ../data/generated/qsmell-metrics/data.csv \
+  raters-vs-qsmell-metrics.tex # (< 1 minute)
+```
+
 - To generated Table V -- Quantum-specific smell's -- run, in the [`experiments/statistics/`](experiments/statistics/) directory, the following command:
 
 ```bash
