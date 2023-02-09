@@ -212,6 +212,7 @@ pip install qiskit-machine-learning==0.4.0 || die "[ERROR] Failed to install Qis
 pip install ddt==1.6.0                     || die "[ERROR] Failed to install ddt!"
 pip install pyscf==2.1.1                   || die "[ERROR] Failed to install pyscf!"
 pip install pylatexenc==2.10               || die "[ERROR] Failed to install pylatexenc!"
+pip install matplotlib==3.5.3              || die "[ERROR] Failed to install matplotlib!"
 # Deactivate virtual environment
 deactivate                                 || die "[ERROR] Failed to deactivate virtual environment!"
 # Revert to system Python version
