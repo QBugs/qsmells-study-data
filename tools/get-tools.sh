@@ -209,6 +209,9 @@ pip install qiskit-terra==0.21.0           || die "[ERROR] Failed to install Qis
 pip install qiskit-nature==0.4.3           || die "[ERROR] Failed to install Qiskit Nature!"
 pip install qiskit-optimization==0.4.0     || die "[ERROR] Failed to install Qiskit Optimization!"
 pip install qiskit-machine-learning==0.4.0 || die "[ERROR] Failed to install Qiskit Machine Learning!"
+pip install ddt==1.6.0                     || die "[ERROR] Failed to install ddt!"
+pip install pyscf==2.1.1                   || die "[ERROR] Failed to install pyscf!"
+pip install pylatexenc==2.10               || die "[ERROR] Failed to install pylatexenc!"
 # Deactivate virtual environment
 deactivate                                 || die "[ERROR] Failed to deactivate virtual environment!"
 # Revert to system Python version

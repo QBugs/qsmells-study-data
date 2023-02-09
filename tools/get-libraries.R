@@ -23,6 +23,8 @@ install.packages('withr', lib=local_library, repos=repository) # required by ggp
 library('withr', lib.loc=local_library)
 install.packages('ggplot2', lib=local_library, repos=repository) # required by caret
 library('ggplot2', lib.loc=local_library)
+install.packages('e1071', lib=local_library, repos=repository) # required by caret
+library('e1071', lib.loc=local_library)
 install.packages('caret', lib=local_library, repos=repository)
 library('caret', lib.loc=local_library)
 
