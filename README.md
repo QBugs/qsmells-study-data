@@ -10,8 +10,8 @@ If you use this artifact for academic purposes, please cite it as
   title = {{The Smelly Eight: An Empirical Study on the Prevalence of Code Smells in Quantum Computing -- Artifact}},
   year = {2023},
   publisher = {Zenodo},
-  doi = {10.5281/zenodo.7556360},
-  url = {https://doi.org/10.5281/zenodo.7556360}
+  doi = {10.5281/zenodo.7625865},
+  url = {https://doi.org/10.5281/zenodo.7625865}
 }
 ```
 
@@ -20,7 +20,7 @@ in case you only want to cite the associated tool, [QSmell](https://github.com/j
 ```Bibtex
 @misc{QSmellV001,
   author = {Chen, Qihong and Câmara, Rúben and Campos, José and Souto, André and Ahmed, Iftekhar},
-  title = {{QSmell v0.0.1}},
+  title = {{QSmell v0.0.2}},
   year = {2023},
   publisher = {GitHub},
   url = {https://github.com/jose/qsmell}
